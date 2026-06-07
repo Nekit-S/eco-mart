@@ -26,6 +26,7 @@ export const NAMESPACES = [
   'auth',
   'onboarding',
   'support',
+  'favorites',
 ]
 
 i18n

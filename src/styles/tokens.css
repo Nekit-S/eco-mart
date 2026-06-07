@@ -89,6 +89,14 @@
   --z-tabbar: 30;
   --z-sheet: 40;
   --z-toast: 50;
+
+  /* ===== Decorative thumbnail gradients (emoji tiles — no photo assets) ===== */
+  --grad-brown: linear-gradient(135deg, #7a5a42, #563f2e);
+  --grad-caramel: linear-gradient(135deg, #c99a66, #a3784e);
+  --grad-green: linear-gradient(135deg, #8fae78, #6b8c56);
+  --grad-honey: linear-gradient(135deg, #e6b25e, #c98a3f);
+  --grad-berry: linear-gradient(135deg, #c56b86, #9c4a61);
+  --grad-cream: linear-gradient(135deg, #ece0cd, #d6c0a0);
 }
 
 /* ===== DARK theme (diploma §3.1; passes AA unchanged for text; accents lightened

@@ -6,6 +6,7 @@ export function formatTenge(amount, lng = 'ru') {
   return new Intl.NumberFormat(localeMap[lng] || 'ru-RU', {
     style: 'currency',
     currency: 'KZT',
+    currencyDisplay: 'narrowSymbol', // prefer the ₸ glyph over the "KZT" code
     maximumFractionDigits: 0,
     minimumFractionDigits: 0,
   }).format(amount)
