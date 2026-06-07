@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="ru" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="manifest" href="/manifest.webmanifest" />
+    <meta name="theme-color" content="#6B4F3A" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#1F1A15" media="(prefers-color-scheme: dark)" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <link rel="apple-touch-icon" href="/favicon.svg" />
+    <title>The Ferma Coffee</title>
+    <!-- Anti-flash theme bootstrap: applies the persisted/system theme before first paint. -->
+    <script>
+      (function () {
+        try {
+          var raw = localStorage.getItem('ferma:ui');
+          var pref = raw ? (JSON.parse(raw).state || {}).theme : 'system';
+          var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+          var theme = pref === 'dark' || (pref !== 'light' && prefersDark) ? 'dark' : 'light';
+          document.documentElement.setAttribute('data-theme', theme);
+        } catch (e) {
+          /* keep default light */
+        }
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>

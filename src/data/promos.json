@@ -1,0 +1,21 @@
+[
+  {
+    "code": "FERMA10",
+    "type": "percent",
+    "value": 10,
+    "label": { "ru": "−10% на весь заказ", "kz": "Бүкіл тапсырысқа −10%", "en": "−10% off your order" }
+  },
+  {
+    "code": "COFFEE500",
+    "type": "amount",
+    "value": 500,
+    "categoryId": "coffee",
+    "label": { "ru": "−500 ₸, если в заказе есть кофе", "kz": "Тапсырыста кофе болса −500 ₸", "en": "−500 ₸ when your order has coffee" }
+  },
+  {
+    "code": "EXPIRED",
+    "type": "expired",
+    "value": 0,
+    "label": { "ru": "Срок действия промокода истёк", "kz": "Промокодтың мерзімі аяқталды", "en": "This promo code has expired" }
+  }
+]

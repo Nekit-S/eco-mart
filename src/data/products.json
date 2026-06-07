@@ -1,0 +1,232 @@
+[
+  {
+    "id": "p-01", "categoryId": "coffee", "farmerId": "f-04", "price": 690, "emoji": "☕", "tone": "brown",
+    "size": { "value": 50, "unit": "ml" }, "tags": ["popular"],
+    "name": { "ru": "Эспрессо", "kz": "Эспрессо", "en": "Espresso" },
+    "description": { "ru": "Плотный шот из локально обжаренного зерна.", "kz": "Жергілікті қуырылған дәннен жасалған қою шот.", "en": "A dense shot from locally roasted beans." },
+    "composition": { "ru": "Кофе спешелти, вода", "kz": "Спешелти кофе, су", "en": "Specialty coffee, water" },
+    "shelfLife": { "ru": "Подаётся сразу", "kz": "Бірден беріледі", "en": "Served fresh" }
+  },
+  {
+    "id": "p-02", "categoryId": "coffee", "farmerId": "f-04", "price": 1290, "emoji": "☕", "tone": "brown",
+    "size": { "value": 250, "unit": "ml" }, "tags": ["popular"],
+    "name": { "ru": "Капучино", "kz": "Капучино", "en": "Cappuccino" },
+    "description": { "ru": "Эспрессо с плотной молочной пенкой.", "kz": "Қою сүт көбігі бар эспрессо.", "en": "Espresso with a dense milk foam." },
+    "composition": { "ru": "Кофе, молоко фермы «Ак Сут»", "kz": "Кофе, «Ақ Сүт» сүті", "en": "Coffee, Ak Sut farm milk" },
+    "shelfLife": { "ru": "Подаётся сразу", "kz": "Бірден беріледі", "en": "Served fresh" }
+  },
+  {
+    "id": "p-03", "categoryId": "coffee", "farmerId": "f-04", "price": 1390, "emoji": "☕", "tone": "brown",
+    "size": { "value": 300, "unit": "ml" }, "tags": ["popular"],
+    "name": { "ru": "Латте", "kz": "Латте", "en": "Latte" },
+    "description": { "ru": "Мягкий кофе с большим количеством молока.", "kz": "Сүті мол жұмсақ кофе.", "en": "A mild coffee with plenty of milk." },
+    "composition": { "ru": "Кофе, молоко фермы «Ак Сут»", "kz": "Кофе, «Ақ Сүт» сүті", "en": "Coffee, Ak Sut farm milk" },
+    "shelfLife": { "ru": "Подаётся сразу", "kz": "Бірден беріледі", "en": "Served fresh" }
+  },
+  {
+    "id": "p-04", "categoryId": "coffee", "farmerId": "f-04", "price": 1350, "emoji": "☕", "tone": "brown",
+    "size": { "value": 200, "unit": "ml" },
+    "name": { "ru": "Флэт уайт", "kz": "Флэт уайт", "en": "Flat white" },
+    "description": { "ru": "Двойной эспрессо и тонкое молоко.", "kz": "Қос эспрессо және жұқа сүт.", "en": "Double espresso and silky milk." },
+    "composition": { "ru": "Кофе, молоко фермы «Ак Сут»", "kz": "Кофе, «Ақ Сүт» сүті", "en": "Coffee, Ak Sut farm milk" },
+    "shelfLife": { "ru": "Подаётся сразу", "kz": "Бірден беріледі", "en": "Served fresh" }
+  },
+  {
+    "id": "p-05", "categoryId": "coffee", "farmerId": "f-04", "price": 1590, "emoji": "🪻", "tone": "brown",
+    "size": { "value": 300, "unit": "ml" }, "tags": ["popular"],
+    "name": { "ru": "Раф «Лаванда»", "kz": "«Лаванда» рафы", "en": "Lavender raf" },
+    "description": { "ru": "Сливочный кофе с нотой лаванды.", "kz": "Лаванда хош иісі бар кілегейлі кофе.", "en": "Creamy coffee with a hint of lavender." },
+    "composition": { "ru": "Кофе, сливки, лавандовый сироп", "kz": "Кофе, кілегей, лаванда шәрбаты", "en": "Coffee, cream, lavender syrup" },
+    "shelfLife": { "ru": "Подаётся сразу", "kz": "Бірден беріледі", "en": "Served fresh" }
+  },
+  {
+    "id": "p-06", "categoryId": "coffee", "farmerId": "f-04", "price": 1190, "emoji": "☕", "tone": "brown",
+    "size": { "value": 250, "unit": "ml" },
+    "name": { "ru": "Фильтр-кофе", "kz": "Фильтр-кофе", "en": "Filter coffee" },
+    "description": { "ru": "Чистый вкус зерна, заварен через фильтр.", "kz": "Фильтр арқылы қайнатылған таза дән дәмі.", "en": "Clean bean flavour, brewed through a filter." },
+    "composition": { "ru": "Кофе спешелти, вода", "kz": "Спешелти кофе, су", "en": "Specialty coffee, water" },
+    "shelfLife": { "ru": "Подаётся сразу", "kz": "Бірден беріледі", "en": "Served fresh" }
+  },
+
+  {
+    "id": "p-07", "categoryId": "bakery", "farmerId": "f-03", "price": 690, "emoji": "🥐", "tone": "caramel",
+    "size": { "value": 70, "unit": "g" }, "tags": ["popular"],
+    "name": { "ru": "Круассан", "kz": "Круассан", "en": "Croissant" },
+    "description": { "ru": "Слоёный круассан ручной раскатки.", "kz": "Қолмен жайылған қатпарлы круассан.", "en": "A hand-laminated flaky croissant." },
+    "composition": { "ru": "Мука, фермерское масло, дрожжи, соль", "kz": "Ұн, фермерлік май, ашытқы, тұз", "en": "Flour, farm butter, yeast, salt" },
+    "shelfLife": { "ru": "1 день", "kz": "1 күн", "en": "1 day" }
+  },
+  {
+    "id": "p-08", "categoryId": "bakery", "farmerId": "f-03", "price": 790, "emoji": "🍥", "tone": "caramel",
+    "size": { "value": 110, "unit": "g" },
+    "name": { "ru": "Булочка с корицей", "kz": "Дарчынды тоқаш", "en": "Cinnamon roll" },
+    "description": { "ru": "Мягкая булочка с корицей и глазурью.", "kz": "Дарчын мен глазурі бар жұмсақ тоқаш.", "en": "A soft roll with cinnamon and glaze." },
+    "composition": { "ru": "Мука, масло, сахар, корица", "kz": "Ұн, май, қант, дарчын", "en": "Flour, butter, sugar, cinnamon" },
+    "shelfLife": { "ru": "2 дня", "kz": "2 күн", "en": "2 days" }
+  },
+  {
+    "id": "p-09", "categoryId": "bakery", "farmerId": "f-03", "price": 850, "emoji": "🥖", "tone": "caramel",
+    "size": { "value": 250, "unit": "g" },
+    "name": { "ru": "Багет на закваске", "kz": "Ашытқыдағы багет", "en": "Sourdough baguette" },
+    "description": { "ru": "Хрустящая корка, мягкий мякиш.", "kz": "Қытырлақ қабық, жұмсақ ұлпа.", "en": "Crisp crust, soft crumb." },
+    "composition": { "ru": "Мука, вода, закваска, соль", "kz": "Ұн, су, ашытқы, тұз", "en": "Flour, water, sourdough, salt" },
+    "shelfLife": { "ru": "2 дня", "kz": "2 күн", "en": "2 days" }
+  },
+  {
+    "id": "p-10", "categoryId": "bakery", "farmerId": "f-03", "price": 1490, "emoji": "🍰", "tone": "caramel",
+    "size": { "value": 120, "unit": "g" }, "tags": ["popular"],
+    "name": { "ru": "Чизкейк", "kz": "Чизкейк", "en": "Cheesecake" },
+    "description": { "ru": "Нежный чизкейк на песочной основе.", "kz": "Құмды негіздегі нәзік чизкейк.", "en": "A delicate cheesecake on a shortcrust base." },
+    "composition": { "ru": "Сыр, сливки, яйцо, сахар, печенье", "kz": "Ірімшік, кілегей, жұмыртқа, қант, печенье", "en": "Cheese, cream, egg, sugar, biscuit" },
+    "shelfLife": { "ru": "3 дня", "kz": "3 күн", "en": "3 days" }
+  },
+  {
+    "id": "p-11", "categoryId": "bakery", "farmerId": "f-03", "price": 690, "emoji": "🧁", "tone": "caramel",
+    "size": { "value": 90, "unit": "g" },
+    "name": { "ru": "Маффин черничный", "kz": "Көкжидекті маффин", "en": "Blueberry muffin" },
+    "description": { "ru": "Влажный маффин с черникой.", "kz": "Көкжидегі бар дымқыл маффин.", "en": "A moist muffin with blueberries." },
+    "composition": { "ru": "Мука, масло, яйцо, черника", "kz": "Ұн, май, жұмыртқа, көкжидек", "en": "Flour, butter, egg, blueberry" },
+    "shelfLife": { "ru": "3 дня", "kz": "3 күн", "en": "3 days" }
+  },
+  {
+    "id": "p-12", "categoryId": "bakery", "farmerId": "f-03", "price": 390, "emoji": "🍪", "tone": "caramel",
+    "size": { "value": 60, "unit": "g" },
+    "name": { "ru": "Овсяное печенье", "kz": "Сұлы печеньесі", "en": "Oatmeal cookie" },
+    "description": { "ru": "Хрустящее печенье из овсяных хлопьев.", "kz": "Сұлы үлпегінен жасалған қытырлақ печенье.", "en": "A crunchy cookie made of oat flakes." },
+    "composition": { "ru": "Овсяные хлопья, мука, масло, мёд", "kz": "Сұлы үлпегі, ұн, май, бал", "en": "Oat flakes, flour, butter, honey" },
+    "shelfLife": { "ru": "7 дней", "kz": "7 күн", "en": "7 days" }
+  },
+
+  {
+    "id": "p-13", "categoryId": "farm", "farmerId": "f-01", "price": 2290, "emoji": "🧀", "tone": "honey",
+    "size": { "value": 200, "unit": "g" }, "tags": ["popular"],
+    "name": { "ru": "Сыр Качотта", "kz": "Качотта ірімшігі", "en": "Caciotta cheese" },
+    "description": { "ru": "Мягкий полутвёрдый сыр недельной выдержки.", "kz": "Бір апта пісірілген жұмсақ жартылай қатты ірімшік.", "en": "A mild semi-hard cheese, aged a week." },
+    "composition": { "ru": "Молоко, закваска, соль, фермент", "kz": "Сүт, ұйытқы, тұз, фермент", "en": "Milk, culture, salt, rennet" },
+    "shelfLife": { "ru": "14 дней", "kz": "14 күн", "en": "14 days" }
+  },
+  {
+    "id": "p-14", "categoryId": "farm", "farmerId": "f-01", "price": 1690, "emoji": "🧀", "tone": "honey",
+    "size": { "value": 250, "unit": "g" },
+    "name": { "ru": "Брынза", "kz": "Брынза", "en": "Brynza" },
+    "description": { "ru": "Солёный рассольный сыр для салатов.", "kz": "Салаттарға арналған тұзды ірімшік.", "en": "A brined salty cheese for salads." },
+    "composition": { "ru": "Молоко, закваска, соль", "kz": "Сүт, ұйытқы, тұз", "en": "Milk, culture, salt" },
+    "shelfLife": { "ru": "20 дней", "kz": "20 күн", "en": "20 days" }
+  },
+  {
+    "id": "p-15", "categoryId": "farm", "farmerId": "f-01", "price": 1190, "emoji": "🥣", "tone": "honey",
+    "size": { "value": 300, "unit": "g" },
+    "name": { "ru": "Творог 5%", "kz": "5% сүзбе", "en": "Curd 5%" },
+    "description": { "ru": "Свежий зернёный творог.", "kz": "Балғын дәнді сүзбе.", "en": "Fresh grainy curd." },
+    "composition": { "ru": "Молоко, закваска", "kz": "Сүт, ұйытқы", "en": "Milk, culture" },
+    "shelfLife": { "ru": "5 дней", "kz": "5 күн", "en": "5 days" }
+  },
+
+  {
+    "id": "p-16", "categoryId": "farm", "farmerId": "f-02", "price": 2490, "emoji": "🍯", "tone": "honey",
+    "size": { "value": 350, "unit": "g" }, "tags": ["popular"],
+    "name": { "ru": "Мёд цветочный", "kz": "Гүл балы", "en": "Flower honey" },
+    "description": { "ru": "Светлый мёд с летнего разнотравья.", "kz": "Жазғы шөптен жиналған ашық бал.", "en": "Light honey from summer meadows." },
+    "composition": { "ru": "Натуральный мёд 100%", "kz": "Табиғи бал 100%", "en": "100% natural honey" },
+    "shelfLife": { "ru": "24 месяца", "kz": "24 ай", "en": "24 months" }
+  },
+  {
+    "id": "p-17", "categoryId": "farm", "farmerId": "f-02", "price": 2890, "emoji": "🍯", "tone": "honey",
+    "size": { "value": 350, "unit": "g" },
+    "name": { "ru": "Мёд горный", "kz": "Тау балы", "en": "Mountain honey" },
+    "description": { "ru": "Тёмный мёд с предгорий Алтая.", "kz": "Алтай тауалды аймағының қою балы.", "en": "Dark honey from the Altai foothills." },
+    "composition": { "ru": "Натуральный мёд 100%", "kz": "Табиғи бал 100%", "en": "100% natural honey" },
+    "shelfLife": { "ru": "24 месяца", "kz": "24 ай", "en": "24 months" }
+  },
+  {
+    "id": "p-18", "categoryId": "farm", "farmerId": "f-02", "price": 1990, "emoji": "🐝", "tone": "honey",
+    "size": { "value": 30, "unit": "g" },
+    "name": { "ru": "Прополис", "kz": "Прополис", "en": "Propolis" },
+    "description": { "ru": "Натуральный пчелиный прополис.", "kz": "Табиғи ара прополисі.", "en": "Natural bee propolis." },
+    "composition": { "ru": "Прополис 100%", "kz": "Прополис 100%", "en": "100% propolis" },
+    "shelfLife": { "ru": "12 месяцев", "kz": "12 ай", "en": "12 months" }
+  },
+
+  {
+    "id": "p-19", "categoryId": "farm", "farmerId": "f-05", "price": 1790, "emoji": "🍓", "tone": "berry",
+    "size": { "value": 300, "unit": "g" }, "tags": ["popular"],
+    "name": { "ru": "Варенье клубничное", "kz": "Құлпынай тосабы", "en": "Strawberry jam" },
+    "description": { "ru": "Сварено в день сбора, без пектина.", "kz": "Жиналған күні пектинсіз қайнатылған.", "en": "Cooked on harvest day, no pectin." },
+    "composition": { "ru": "Клубника, сахар", "kz": "Құлпынай, қант", "en": "Strawberry, sugar" },
+    "shelfLife": { "ru": "12 месяцев", "kz": "12 ай", "en": "12 months" }
+  },
+  {
+    "id": "p-20", "categoryId": "farm", "farmerId": "f-05", "price": 1890, "emoji": "🫐", "tone": "berry",
+    "size": { "value": 300, "unit": "g" },
+    "name": { "ru": "Варенье малиновое", "kz": "Таңқурай тосабы", "en": "Raspberry jam" },
+    "description": { "ru": "Ароматное варенье из садовой малины.", "kz": "Бақ таңқурайынан жасалған хош иісті тосап.", "en": "Fragrant jam from garden raspberries." },
+    "composition": { "ru": "Малина, сахар", "kz": "Таңқурай, қант", "en": "Raspberry, sugar" },
+    "shelfLife": { "ru": "12 месяцев", "kz": "12 ай", "en": "12 months" }
+  },
+  {
+    "id": "p-21", "categoryId": "farm", "farmerId": "f-05", "price": 1690, "emoji": "🍑", "tone": "berry",
+    "size": { "value": 300, "unit": "g" },
+    "name": { "ru": "Варенье абрикосовое", "kz": "Өрік тосабы", "en": "Apricot jam" },
+    "description": { "ru": "Густое варенье из спелых абрикосов.", "kz": "Піскен өріктен жасалған қою тосап.", "en": "Thick jam from ripe apricots." },
+    "composition": { "ru": "Абрикос, сахар", "kz": "Өрік, қант", "en": "Apricot, sugar" },
+    "shelfLife": { "ru": "12 месяцев", "kz": "12 ай", "en": "12 months" }
+  },
+
+  {
+    "id": "p-22", "categoryId": "farm", "farmerId": "f-06", "price": 890, "emoji": "🥛", "tone": "cream",
+    "size": { "value": 1, "unit": "l" }, "tags": ["popular"],
+    "name": { "ru": "Молоко фермерское", "kz": "Фермерлік сүт", "en": "Farm milk" },
+    "description": { "ru": "Цельное молоко, доставка за сутки.", "kz": "Толық сүт, тәулік ішінде жеткізу.", "en": "Whole milk, delivered within a day." },
+    "composition": { "ru": "Молоко цельное", "kz": "Толық сүт", "en": "Whole milk" },
+    "shelfLife": { "ru": "5 дней", "kz": "5 күн", "en": "5 days" }
+  },
+  {
+    "id": "p-23", "categoryId": "farm", "farmerId": "f-06", "price": 1590, "emoji": "🧈", "tone": "cream",
+    "size": { "value": 200, "unit": "g" },
+    "name": { "ru": "Масло сливочное", "kz": "Сары май", "en": "Butter" },
+    "description": { "ru": "Сладко-сливочное масло 82%.", "kz": "Тәтті кілегейлі 82% май.", "en": "Sweet cream butter 82%." },
+    "composition": { "ru": "Сливки", "kz": "Кілегей", "en": "Cream" },
+    "shelfLife": { "ru": "30 дней", "kz": "30 күн", "en": "30 days" }
+  },
+
+  {
+    "id": "p-24", "categoryId": "food", "farmerId": "f-01", "price": 1690, "emoji": "🥪", "tone": "honey",
+    "size": { "value": 220, "unit": "g" },
+    "name": { "ru": "Сэндвич с качоттой", "kz": "Качоттамен сэндвич", "en": "Caciotta sandwich" },
+    "description": { "ru": "Багет, качотта, томаты, зелень.", "kz": "Багет, качотта, қызанақ, көкөніс.", "en": "Baguette, caciotta, tomatoes, greens." },
+    "composition": { "ru": "Багет, сыр Качотта, томаты, салат", "kz": "Багет, Качотта ірімшігі, қызанақ, салат", "en": "Baguette, caciotta cheese, tomatoes, lettuce" },
+    "shelfLife": { "ru": "Готовится при заказе", "kz": "Тапсырыс бойынша дайындалады", "en": "Made to order" }
+  },
+  {
+    "id": "p-25", "categoryId": "food", "farmerId": "f-05", "price": 1990, "emoji": "🥣", "tone": "berry",
+    "size": { "value": 300, "unit": "g" }, "tags": ["popular"],
+    "name": { "ru": "Ягодный боул", "kz": "Жидек боулы", "en": "Berry bowl" },
+    "description": { "ru": "Йогурт, сезонные ягоды, гранола.", "kz": "Йогурт, маусымдық жидектер, гранола.", "en": "Yogurt, seasonal berries, granola." },
+    "composition": { "ru": "Йогурт, клубника, малина, гранола", "kz": "Йогурт, құлпынай, таңқурай, гранола", "en": "Yogurt, strawberry, raspberry, granola" },
+    "shelfLife": { "ru": "Готовится при заказе", "kz": "Тапсырыс бойынша дайындалады", "en": "Made to order" }
+  },
+  {
+    "id": "p-26", "categoryId": "food", "farmerId": "f-06", "price": 1490, "emoji": "🥣", "tone": "cream",
+    "size": { "value": 250, "unit": "g" },
+    "name": { "ru": "Гранола с йогуртом", "kz": "Йогуртпен гранола", "en": "Granola with yogurt" },
+    "description": { "ru": "Домашняя гранола и фермерский йогурт.", "kz": "Үй граноласы және фермерлік йогурт.", "en": "Homemade granola and farm yogurt." },
+    "composition": { "ru": "Йогурт, овсяная гранола, мёд", "kz": "Йогурт, сұлы граноласы, бал", "en": "Yogurt, oat granola, honey" },
+    "shelfLife": { "ru": "Готовится при заказе", "kz": "Тапсырыс бойынша дайындалады", "en": "Made to order" }
+  },
+  {
+    "id": "p-27", "categoryId": "food", "farmerId": "f-06", "price": 1190, "emoji": "🥣", "tone": "cream",
+    "size": { "value": 300, "unit": "g" },
+    "name": { "ru": "Овсяная каша", "kz": "Сұлы ботқасы", "en": "Oatmeal porridge" },
+    "description": { "ru": "Каша на фермерском молоке с ягодами.", "kz": "Жидегі бар фермерлік сүттегі ботқа.", "en": "Porridge on farm milk with berries." },
+    "composition": { "ru": "Овсяные хлопья, молоко, ягоды", "kz": "Сұлы үлпегі, сүт, жидектер", "en": "Oat flakes, milk, berries" },
+    "shelfLife": { "ru": "Готовится при заказе", "kz": "Тапсырыс бойынша дайындалады", "en": "Made to order" }
+  },
+  {
+    "id": "p-28", "categoryId": "food", "farmerId": "f-06", "price": 1590, "emoji": "🥞", "tone": "cream",
+    "size": { "value": 220, "unit": "g" }, "tags": ["popular"],
+    "name": { "ru": "Сырники со сметаной", "kz": "Қаймақпен сырник", "en": "Syrniki with sour cream" },
+    "description": { "ru": "Творожные сырники, подаются тёплыми.", "kz": "Сүзбе сырниктері, жылы күйінде беріледі.", "en": "Curd syrniki, served warm." },
+    "composition": { "ru": "Творог, яйцо, мука, сметана", "kz": "Сүзбе, жұмыртқа, ұн, қаймақ", "en": "Curd, egg, flour, sour cream" },
+    "shelfLife": { "ru": "Готовится при заказе", "kz": "Тапсырыс бойынша дайындалады", "en": "Made to order" }
+  }
+]

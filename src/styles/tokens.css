@@ -1,0 +1,134 @@
+/* ============================================================================
+   Design tokens — The Ferma Coffee
+   Palette from the diploma (§3.1), with WCAG 2.1 AA text-safe corrections.
+   Rule of thumb:
+     *-fill  = original brand hex, decorative / large-text only (passes 3:1)
+     base    = AA-safe variant used wherever small/normal text or white-on-color sits
+   ============================================================================ */
+
+:root {
+  color-scheme: light dark;
+
+  /* ===== Surfaces & text — LIGHT (default) ===== */
+  --c-bg: #f8f3ea;            /* warm milk */
+  --c-surface: #ffffff;       /* cards */
+  --c-surface-alt: #f1e9da;   /* chips / subtle raised / inputs */
+  --c-border: #e7dccb;        /* hairline */
+  --c-overlay: rgba(47, 42, 37, 0.45);
+
+  --c-text: #2f2a25;          /* primary — 12.85:1 on bg */
+  --c-text-2: #6b6258;        /* secondary — AA-corrected (5.41:1 on bg) */
+  --c-on-brand: #ffffff;      /* text/icon on brand & colored fills */
+
+  /* ===== Brand (coffee brown) ===== */
+  --c-brand: #6b4f3a;         /* white-on 7.49:1 */
+  --c-brand-strong: #553e2d;  /* pressed */
+  --c-brand-tint: #efe7dc;    /* faint wash */
+
+  /* ===== Accent (farm green) ===== */
+  --c-accent-fill: #7a9e65;   /* decorative / large text */
+  --c-accent: #5e7e4b;        /* AA-safe for text/links & white-on (4.60:1) */
+  --c-accent-tint: #e8efe0;
+
+  /* ===== Caramel ===== */
+  --c-caramel-fill: #a67c52;  /* decorative fill only */
+  --c-caramel: #8c6a42;       /* AA-safe when text sits on it */
+
+  /* ===== Status ===== */
+  --c-success: #4f7a52;       /* AA text/badge (4.96:1) */
+  --c-success-fill: #5e8c61;
+  --c-success-tint: #e5efe3;
+  --c-error: #b4403e;         /* AA text/badge (5.08:1 on bg) */
+  --c-error-fill: #c85250;
+  --c-error-tint: #f8e5e2;
+  --c-warning: #9a6b1f;
+  --c-warning-tint: #f5ecd9;
+
+  --c-link: var(--c-accent);
+
+  /* ===== Skeleton shimmer ===== */
+  --c-skeleton-base: #ece3d4;
+  --c-skeleton-hi: #f6efe3;
+
+  /* ===== Elevation ===== */
+  --shadow-sm: 0 1px 2px rgba(47, 42, 37, 0.06), 0 1px 3px rgba(47, 42, 37, 0.08);
+  --shadow-md: 0 4px 12px rgba(47, 42, 37, 0.1);
+  --shadow-lg: 0 10px 30px rgba(47, 42, 37, 0.14);
+  --shadow-nav: 0 -2px 16px rgba(47, 42, 37, 0.08);
+
+  /* ===== Radius ===== */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  --radius-pill: 999px;
+
+  /* ===== Spacing — 8px base grid (diploma §3.1) ===== */
+  --sp-1: 4px;
+  --sp-2: 8px;
+  --sp-3: 12px;  /* catalog card gap */
+  --sp-4: 16px;  /* screen padding / card inner */
+  --sp-5: 24px;
+  --sp-6: 32px;
+  --sp-7: 40px;
+
+  /* ===== Layout ===== */
+  --app-max: 480px;     /* mobile canvas width */
+  --header-h: 56px;
+  --tabbar-h: 64px;
+  --tap-min: 44px;      /* WCAG min touch target */
+
+  /* ===== Motion (diploma: 200–300ms, light easing) ===== */
+  --dur-fast: 0.15s;
+  --dur: 0.25s;
+  --dur-slow: 0.3s;
+  --ease: cubic-bezier(0.22, 0.61, 0.36, 1); /* ≈ power2.out */
+
+  /* ===== z-index ===== */
+  --z-header: 20;
+  --z-tabbar: 30;
+  --z-sheet: 40;
+  --z-toast: 50;
+}
+
+/* ===== DARK theme (diploma §3.1; passes AA unchanged for text; accents lightened
+   so they read on dark when used as text/links and stay legible as fills) ===== */
+[data-theme='dark'] {
+  --c-bg: #1f1a15;
+  --c-surface: #2a241e;
+  --c-surface-alt: #342d25;
+  --c-border: #3d352b;
+  --c-overlay: rgba(0, 0, 0, 0.55);
+
+  --c-text: #f0e8dd;          /* 14.21:1 on bg */
+  --c-text-2: #b0a89d;        /* 7.34:1 on bg */
+  --c-on-brand: #1f1a15;      /* dark text on the lightened brand/accent fills */
+
+  --c-brand: #b98d63;         /* lightened coffee for buttons/links */
+  --c-brand-strong: #a77c53;
+  --c-brand-tint: #2e2620;
+
+  --c-accent-fill: #9cbe86;
+  --c-accent: #a9c795;        /* link/text on dark */
+  --c-accent-tint: #28301f;
+
+  --c-caramel-fill: #c49a6c;
+  --c-caramel: #d2a878;
+
+  --c-success: #8fbf8a;
+  --c-success-fill: #5e8c61;
+  --c-success-tint: #25301f;
+  --c-error: #e2807d;
+  --c-error-fill: #c85250;
+  --c-error-tint: #3a2420;
+  --c-warning: #d9b066;
+  --c-warning-tint: #322a1c;
+
+  --c-skeleton-base: #322b23;
+  --c-skeleton-hi: #3e362c;
+
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.4);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.45);
+  --shadow-lg: 0 10px 30px rgba(0, 0, 0, 0.5);
+  --shadow-nav: 0 -2px 16px rgba(0, 0, 0, 0.5);
+}

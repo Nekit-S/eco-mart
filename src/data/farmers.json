@@ -1,0 +1,116 @@
+[
+  {
+    "id": "f-01",
+    "emoji": "🧀",
+    "tone": "honey",
+    "established": 2016,
+    "farmerOfWeek": true,
+    "name": { "ru": "Сыроварня «Алтын Дала»", "kz": "«Алтын Дала» ірімшік зауыты", "en": "Altyn Dala Creamery" },
+    "region": { "ru": "Алматинская область", "kz": "Алматы облысы", "en": "Almaty region" },
+    "short": {
+      "ru": "Семейная сыроварня: качотта, брынза и творог из молока своих коров.",
+      "kz": "Отбасылық ірімшік зауыты: качотта, брынза және өз сиырларының сүтінен ірімшік.",
+      "en": "A family creamery: caciotta, brynza and curd from our own cows' milk."
+    },
+    "story": {
+      "ru": "Мы начинали с трёх коров и одной формы для сыра. Сегодня «Алтын Дала» поставляет свежие сыры городским кофейням, сохраняя ремесленный подход: молоко с утренней дойки превращается в сыр в тот же день. Никаких консервантов — только молоко, закваска и время.",
+      "kz": "Біз үш сиыр мен бір ірімшік қалыбынан бастадық. Бүгінде «Алтын Дала» қолөнер тәсілін сақтай отырып, қалалық кофейняларға балғын ірімшік жеткізеді: таңертеңгі сауыннан алынған сүт сол күні ірімшікке айналады. Консерванттар жоқ — тек сүт, ұйытқы және уақыт.",
+      "en": "We started with three cows and a single cheese mould. Today Altyn Dala supplies fresh cheeses to city coffee shops while keeping the craft approach: milk from the morning milking becomes cheese the same day. No preservatives — just milk, culture and time."
+    }
+  },
+  {
+    "id": "f-02",
+    "emoji": "🍯",
+    "tone": "honey",
+    "established": 2009,
+    "farmerOfWeek": false,
+    "name": { "ru": "Пасека «Медовый край»", "kz": "«Бал өлкесі» омарта", "en": "Medovy Krai Apiary" },
+    "region": { "ru": "Восточно-Казахстанская область", "kz": "Шығыс Қазақстан облысы", "en": "East Kazakhstan region" },
+    "short": {
+      "ru": "Горный мёд и прополис с алтайских предгорий.",
+      "kz": "Алтай тауалды аймағының тау балы мен прополисі.",
+      "en": "Mountain honey and propolis from the Altai foothills."
+    },
+    "story": {
+      "ru": "Наши ульи стоят в предгорьях Алтая, вдали от полей и трасс. Мёд мы качаем небольшими партиями и не нагреваем, чтобы сохранить ферменты и аромат разнотравья. Каждая банка подписана месяцем сбора.",
+      "kz": "Біздің араларымыз егістік пен тас жолдардан алыс, Алтай тауалды аймағында тұр. Балды аз көлемде аламыз және ферменттер мен шөп хош иісін сақтау үшін қыздырмаймыз. Әр банкада жиналған айы жазылған.",
+      "en": "Our hives sit in the Altai foothills, far from fields and highways. We harvest in small batches and never heat the honey, preserving the enzymes and the meadow aroma. Every jar is dated by harvest month."
+    }
+  },
+  {
+    "id": "f-03",
+    "emoji": "🥐",
+    "tone": "caramel",
+    "established": 2019,
+    "farmerOfWeek": false,
+    "name": { "ru": "Пекарня «Тёплый угол»", "kz": "«Жылы бұрыш» наубайханасы", "en": "Tyoply Ugol Bakery" },
+    "region": { "ru": "Астана", "kz": "Астана", "en": "Astana" },
+    "short": {
+      "ru": "Хлеб на закваске и круассаны ручной слойки каждое утро.",
+      "kz": "Ашытқыға пісірілген нан және әр таңда қолмен жасалған круассандар.",
+      "en": "Sourdough bread and hand-laminated croissants every morning."
+    },
+    "story": {
+      "ru": "Мы печём на закваске, которой уже пять лет, и раскатываем тесто для круассанов вручную. Выпечка приезжает в кофейни тёплой к открытию — мы развозим её на рассвете. Используем местную муку и масло фермерских хозяйств.",
+      "kz": "Біз бес жылдық ашытқыға нан пісіреміз және круассан қамырын қолмен жаямыз. Тоқаш кофейняларға ашылар алдында жылы күйінде жетеді — біз оны таң ата жеткіземіз. Жергілікті ұн мен фермерлік май қолданамыз.",
+      "en": "We bake on a five-year-old sourdough starter and laminate croissant dough by hand. Pastries reach the coffee shops warm by opening time — we deliver at dawn. We use local flour and farm butter."
+    }
+  },
+  {
+    "id": "f-04",
+    "emoji": "🌱",
+    "tone": "brown",
+    "established": 2018,
+    "farmerOfWeek": false,
+    "name": { "ru": "Обжарщик «Дала Кофе»", "kz": "«Дала Кофе» қуырушысы", "en": "Dala Coffee Roasters" },
+    "region": { "ru": "Алматы", "kz": "Алматы", "en": "Almaty" },
+    "short": {
+      "ru": "Локальная обжарка спешелти-зерна небольшими партиями.",
+      "kz": "Спешелти дәнді шағын партиямен жергілікті қуыру.",
+      "en": "Local small-batch roasting of specialty beans."
+    },
+    "story": {
+      "ru": "Мы обжариваем зелёное зерно небольшими партиями под каждую кофейню и ставим дату обжарки на каждой пачке. Профиль обжарки подбираем под способ заваривания — от эспрессо до фильтра.",
+      "kz": "Біз жасыл дәнді әр кофейняға арнап шағын партиямен қуырамыз және әр қапта қуыру күнін көрсетеміз. Қуыру профилін дайындау әдісіне қарай таңдаймыз — эспрессодан фильтрге дейін.",
+      "en": "We roast green beans in small batches for each coffee shop and stamp the roast date on every bag. We tune the roast profile to the brew method — from espresso to filter."
+    }
+  },
+  {
+    "id": "f-05",
+    "emoji": "🍓",
+    "tone": "berry",
+    "established": 2014,
+    "farmerOfWeek": false,
+    "name": { "ru": "Ягодная ферма «Жайлау»", "kz": "«Жайлау» жидек фермасы", "en": "Zhailau Berry Farm" },
+    "region": { "ru": "Алматинская область", "kz": "Алматы облысы", "en": "Almaty region" },
+    "short": {
+      "ru": "Сезонные ягоды и варенье без загустителей.",
+      "kz": "Маусымдық жидектер және қоюлатқышсыз тосап.",
+      "en": "Seasonal berries and jam with no thickeners."
+    },
+    "story": {
+      "ru": "Клубнику и малину мы собираем вручную в сезон и варим небольшими партиями в тот же день. В варенье — только ягоды и сахар, без пектина и консервантов, поэтому вкус ближе к свежей ягоде.",
+      "kz": "Құлпынай мен таңқурайды маусымында қолмен жинап, сол күні аз партиямен қайнатамыз. Тосапта тек жидек пен қант бар — пектин мен консервант жоқ, сондықтан дәмі балғын жидекке жақын.",
+      "en": "We hand-pick strawberries and raspberries in season and cook them in small batches the same day. The jam contains only berries and sugar — no pectin, no preservatives — so the taste stays close to fresh fruit."
+    }
+  },
+  {
+    "id": "f-06",
+    "emoji": "🥛",
+    "tone": "cream",
+    "established": 2012,
+    "farmerOfWeek": false,
+    "name": { "ru": "Молочная ферма «Ак Сут»", "kz": "«Ақ Сүт» сүт фермасы", "en": "Ak Sut Dairy Farm" },
+    "region": { "ru": "Акмолинская область", "kz": "Ақмола облысы", "en": "Akmola region" },
+    "short": {
+      "ru": "Свежее молоко, масло и завтраки на каждый день.",
+      "kz": "Балғын сүт, сары май және күнделікті таңғы астар.",
+      "en": "Fresh milk, butter and everyday breakfasts."
+    },
+    "story": {
+      "ru": "Наше стадо пасётся на акмолинских лугах, а молоко мы доставляем в город в течение суток. Из него же делаем сливочное масло и готовим завтраки — гранолу, кашу и сырники для кофеен-партнёров.",
+      "kz": "Біздің малымыз Ақмола шалғындарында жайылады, ал сүтті қалаға тәулік ішінде жеткіземіз. Сол сүттен сары май жасап, серіктес кофейняларға таңғы ас — гранола, ботқа және сырник дайындаймыз.",
+      "en": "Our herd grazes on the Akmola meadows and we deliver the milk to the city within a day. From it we also make butter and prepare breakfasts — granola, porridge and syrniki — for partner coffee shops."
+    }
+  }
+]

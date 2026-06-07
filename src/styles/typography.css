@@ -1,0 +1,82 @@
+/* ============================================================================
+   Typography — Manrope Variable (self-hosted via @fontsource-variable/manrope).
+   Scale from the diploma §3.1. Noto Sans is a CSS-only fallback (not bundled).
+   ============================================================================ */
+
+:root {
+  --font-sans: 'Manrope Variable', 'Noto Sans', system-ui, -apple-system,
+    'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-semibold: 600;
+  --fw-bold: 700;
+
+  --fs-h1: 28px;
+  --fs-h2: 22px;
+  --fs-h3: 18px;
+  --fs-body: 16px;
+  --fs-caption: 13px;
+  --fs-price: 18px;
+  --fs-button: 16px;
+
+  --lh-tight: 1.2;
+  --lh-heading: 1.28;
+  --lh-body: 1.5;
+}
+
+body {
+  font-family: var(--font-sans);
+  font-size: var(--fs-body);
+  line-height: var(--lh-body);
+  font-weight: var(--fw-regular);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+h1,
+.t-h1 {
+  font-size: var(--fs-h1);
+  line-height: var(--lh-tight);
+  font-weight: var(--fw-bold);
+  letter-spacing: -0.02em;
+  margin: 0;
+}
+h2,
+.t-h2 {
+  font-size: var(--fs-h2);
+  line-height: var(--lh-heading);
+  font-weight: var(--fw-semibold);
+  letter-spacing: -0.01em;
+  margin: 0;
+}
+h3,
+.t-h3 {
+  font-size: var(--fs-h3);
+  line-height: var(--lh-heading);
+  font-weight: var(--fw-semibold);
+  margin: 0;
+}
+.t-body {
+  font-size: var(--fs-body);
+  line-height: var(--lh-body);
+  font-weight: var(--fw-regular);
+}
+.t-caption {
+  font-size: var(--fs-caption);
+  line-height: 1.4;
+  font-weight: var(--fw-regular);
+  color: var(--c-text-2);
+}
+.t-price {
+  font-size: var(--fs-price);
+  font-weight: var(--fw-bold);
+  letter-spacing: -0.01em;
+}
+.t-button {
+  font-size: var(--fs-button);
+  font-weight: var(--fw-semibold);
+}
+.t-muted {
+  color: var(--c-text-2);
+}

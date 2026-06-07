@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-label="The Ferma Coffee">
+  <rect width="64" height="64" rx="16" fill="#F8F3EA"/>
+  <!-- geo pin -->
+  <path d="M32 12c-8.3 0-15 6.5-15 14.6 0 10.4 13.2 22.3 14 23 .6.5 1.4.5 2 0 .8-.7 14-12.6 14-23C47 18.5 40.3 12 32 12z" fill="#6B4F3A"/>
+  <!-- coffee bean -->
+  <ellipse cx="32" cy="26.6" rx="6.2" ry="8.2" fill="#F8F3EA"/>
+  <path d="M32 19c2.2 2.4 2.2 12.8 0 15.2" stroke="#6B4F3A" stroke-width="1.6" fill="none" stroke-linecap="round"/>
+  <!-- leaf accent -->
+  <path d="M44 40c-6 0-10 3.4-10 9 5.8 0 10-3.2 10-9z" fill="#7A9E65"/>
+</svg>

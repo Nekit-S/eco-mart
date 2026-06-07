@@ -1,0 +1,26 @@
+[
+  {
+    "id": "coffee",
+    "emoji": "☕",
+    "tone": "brown",
+    "name": { "ru": "Кофе", "kz": "Кофе", "en": "Coffee" }
+  },
+  {
+    "id": "food",
+    "emoji": "🥗",
+    "tone": "green",
+    "name": { "ru": "Еда", "kz": "Тамақ", "en": "Food" }
+  },
+  {
+    "id": "bakery",
+    "emoji": "🥐",
+    "tone": "caramel",
+    "name": { "ru": "Выпечка", "kz": "Нан-тоқаш", "en": "Bakery" }
+  },
+  {
+    "id": "farm",
+    "emoji": "🧺",
+    "tone": "honey",
+    "name": { "ru": "Фермерские продукты", "kz": "Фермерлік өнімдер", "en": "Farm products" }
+  }
+]
