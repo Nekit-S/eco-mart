@@ -412,6 +412,8 @@
 .fav:active { transform: scale(0.85); }
 .fav.is-active { color: var(--c-error); }
 .fav--sm { width: 34px; height: 34px; font-size: 17px; }
+/* fill blooms in after the outline is "embroidered" */
+.fav-heart path { transition: fill-opacity 0.25s var(--ease); }
 
 /* ===== Add-to-cart compact ===== */
 .add-compact {

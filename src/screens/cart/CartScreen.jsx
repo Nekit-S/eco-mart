@@ -31,6 +31,9 @@ export default function CartScreen() {
   const promoCode = useCartStore((s) => s.promoCode)
   const applyPromo = useCartStore((s) => s.applyPromo)
   const clearPromo = useCartStore((s) => s.clearPromo)
+
+  // "Exit cart" — go back to the previous screen (or Home on a direct load).
+  const goBack = () => (window.history.length > 1 ? navigate(-1) : navigate('/home'))
   const subtotal = useCartStore(selectSubtotal)
   const discount = useCartStore(selectDiscount)
   const total = useCartStore(selectTotal)
@@ -49,7 +52,7 @@ export default function CartScreen() {
   if (!items.length) {
     return (
       <>
-        <AppHeader title={t('cart:title')} />
+        <AppHeader title={t('cart:title')} back onBack={goBack} />
         <Page>
           <EmptyState
             icon="cart"
