@@ -2,6 +2,7 @@ import { useNavigate } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import { useCartStore } from '../../store/useCartStore.js'
 import { FULFILLMENT } from '../../utils/constants.js'
+import Icon from '../../components/ui/Icon.jsx'
 
 export default function Step1Fulfillment() {
   const { t } = useTranslation()
@@ -15,8 +16,8 @@ export default function Step1Fulfillment() {
   }
 
   const OPTIONS = [
-    { type: FULFILLMENT.DELIVERY, emoji: '🛵', title: t('checkout:fulfillment.delivery'), desc: t('checkout:fulfillment.deliveryDesc') },
-    { type: FULFILLMENT.PICKUP, emoji: '🏪', title: t('checkout:fulfillment.pickup'), desc: t('checkout:fulfillment.pickupDesc') },
+    { type: FULFILLMENT.DELIVERY, icon: 'truck', title: t('checkout:fulfillment.delivery'), desc: t('checkout:fulfillment.deliveryDesc') },
+    { type: FULFILLMENT.PICKUP, icon: 'store', title: t('checkout:fulfillment.pickup'), desc: t('checkout:fulfillment.pickupDesc') },
   ]
 
   return (
@@ -30,12 +31,12 @@ export default function Step1Fulfillment() {
             className={'option card' + (fulfillment === o.type ? ' is-active' : '')}
             onClick={() => choose(o.type)}
           >
-            <span className="option__emoji" aria-hidden="true">{o.emoji}</span>
+            <span className="option__icon" aria-hidden="true"><Icon name={o.icon} size={24} /></span>
             <span className="option__body">
               <strong>{o.title}</strong>
               <span className="t-caption">{o.desc}</span>
             </span>
-            <span className="option__chev" aria-hidden="true">›</span>
+            <Icon name="chevronRight" size={22} className="option__chev" />
           </button>
         ))}
       </div>

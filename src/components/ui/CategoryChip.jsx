@@ -1,4 +1,6 @@
-export default function CategoryChip({ active = false, emoji, children, ...rest }) {
+import Icon from './Icon.jsx'
+
+export default function CategoryChip({ active = false, icon, children, ...rest }) {
   return (
     <button
       type="button"
@@ -6,7 +8,7 @@ export default function CategoryChip({ active = false, emoji, children, ...rest 
       aria-pressed={active}
       {...rest}
     >
-      {emoji && <span className="chip__emoji" aria-hidden="true">{emoji}</span>}
+      {icon && <Icon name={icon} size={18} strokeWidth={2} className="chip__icon" />}
       <span>{children}</span>
     </button>
   )

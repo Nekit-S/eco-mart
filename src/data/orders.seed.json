@@ -9,9 +9,9 @@
       "address": { "ru": "ул. Достык, 5, кв. 12", "kz": "Достық к-сі, 5, пәтер 12", "en": "5 Dostyk St, apt. 12" }
     },
     "items": [
-      { "productId": "p-02", "qty": 1, "priceSnapshot": 1290, "emoji": "☕", "tone": "brown",
+      { "productId": "p-02", "qty": 1, "priceSnapshot": 1290, "icon": "cup", "tone": "brown",
         "name": { "ru": "Капучино", "kz": "Капучино", "en": "Cappuccino" } },
-      { "productId": "p-07", "qty": 2, "priceSnapshot": 690, "emoji": "🥐", "tone": "caramel",
+      { "productId": "p-07", "qty": 2, "priceSnapshot": 690, "icon": "croissant", "tone": "caramel",
         "name": { "ru": "Круассан", "kz": "Круассан", "en": "Croissant" } }
     ],
     "total": 2670
@@ -27,9 +27,9 @@
       "timeSlot": "09:00"
     },
     "items": [
-      { "productId": "p-13", "qty": 1, "priceSnapshot": 2290, "emoji": "🧀", "tone": "honey",
+      { "productId": "p-13", "qty": 1, "priceSnapshot": 2290, "icon": "cheese", "tone": "honey",
         "name": { "ru": "Сыр Качотта", "kz": "Качотта ірімшігі", "en": "Caciotta cheese" } },
-      { "productId": "p-16", "qty": 1, "priceSnapshot": 2490, "emoji": "🍯", "tone": "honey",
+      { "productId": "p-16", "qty": 1, "priceSnapshot": 2490, "icon": "honey", "tone": "honey",
         "name": { "ru": "Мёд цветочный", "kz": "Гүл балы", "en": "Flower honey" } }
     ],
     "total": 4780
@@ -44,7 +44,7 @@
       "address": { "ru": "ул. Достык, 5, кв. 12", "kz": "Достық к-сі, 5, пәтер 12", "en": "5 Dostyk St, apt. 12" }
     },
     "items": [
-      { "productId": "p-03", "qty": 1, "priceSnapshot": 1390, "emoji": "☕", "tone": "brown",
+      { "productId": "p-03", "qty": 1, "priceSnapshot": 1390, "icon": "cup", "tone": "brown",
         "name": { "ru": "Латте", "kz": "Латте", "en": "Latte" } }
     ],
     "total": 1390

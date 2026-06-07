@@ -7,6 +7,7 @@ import Section from '../../components/layout/Section.jsx'
 import Thumb from '../../components/product/Thumb.jsx'
 import ProductCard from '../../components/product/ProductCard.jsx'
 import Badge from '../../components/ui/Badge.jsx'
+import Icon from '../../components/ui/Icon.jsx'
 import EmptyState from '../../components/feedback/EmptyState.jsx'
 import { useLang } from '../../hooks/useLang.js'
 import { getFarmer, getProductsByFarmer, localizeEntity, localizeList } from '../../data/index.js'
@@ -24,7 +25,7 @@ export default function FarmerDetailScreen() {
       <>
         <AppHeader back />
         <Page>
-          <EmptyState emoji="🧭" title={t('farmer:empty')} />
+          <EmptyState icon="sprout" title={t('farmer:empty')} />
         </Page>
       </>
     )
@@ -57,14 +58,16 @@ export default function FarmerDetailScreen() {
       <AppHeader back title={farmer.name} />
       <Page entrance="none">
         <div ref={revealRef} style={{ display: 'contents' }}>
-          <Thumb className="reveal" emoji={farmer.emoji} tone={farmer.tone} shape="cover" ariaLabel={farmer.name} />
+          <Thumb className="reveal" icon={farmer.icon} tone={farmer.tone} shape="cover" ariaLabel={farmer.name} />
 
           {/* Section 1 — intro */}
           <Section title={t('farmer:section.intro')} className="reveal">
           <div className="farmer-meta">
-            <Badge tone="brand">📍 {farmer.region}</Badge>
-            <Badge tone="neutral">{t('farmer:since', { year: farmer.established })}</Badge>
-            {farmer.farmerOfWeek && <Badge tone="accent">⭐ {t('farmer:ofWeek')}</Badge>}
+            <Badge tone="brand"><Icon name="pin" size={13} strokeWidth={2} /> {farmer.region}</Badge>
+            <Badge tone="neutral"><Icon name="clock" size={13} strokeWidth={2} /> {t('farmer:since', { year: farmer.established })}</Badge>
+            {farmer.farmerOfWeek && (
+              <Badge tone="accent"><Icon name="star" size={13} filled strokeWidth={1.6} /> {t('farmer:ofWeek')}</Badge>
+            )}
           </div>
           <p className="t-body">{farmer.short}</p>
         </Section>

@@ -82,7 +82,7 @@ export default function CatalogScreen() {
           {categories.map((c) => (
             <CategoryChip
               key={c.id}
-              emoji={c.emoji}
+              icon={c.icon}
               active={cat === c.id}
               onClick={() => setCat(c.id)}
             >
@@ -101,7 +101,7 @@ export default function CatalogScreen() {
               ))}
             </div>
           ) : (
-            <EmptyState emoji="🔍" title={t('catalog:empty.title')} subtitle={t('catalog:empty.sub')} />
+            <EmptyState icon="search" title={t('catalog:empty.title')} subtitle={t('catalog:empty.sub')} />
           )}
         </div>
       </Page>

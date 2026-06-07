@@ -1,4 +1,5 @@
 import { useUiStore } from '../../store/useUiStore.js'
+import Icon from './Icon.jsx'
 
 // Light/dark toggle. Icon reflects the *resolved* theme.
 export default function ThemeToggle() {
@@ -13,7 +14,7 @@ export default function ThemeToggle() {
       aria-label={isDark ? 'Светлая тема' : 'Тёмная тема'}
       title={isDark ? 'Светлая тема' : 'Тёмная тема'}
     >
-      {isDark ? '☀️' : '🌙'}
+      <Icon name={isDark ? 'sun' : 'moon'} size={20} />
     </button>
   )
 }

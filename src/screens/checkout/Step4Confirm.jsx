@@ -2,6 +2,7 @@ import { useMemo } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import Button from '../../components/ui/Button.jsx'
+import Icon from '../../components/ui/Icon.jsx'
 import { useLang } from '../../hooks/useLang.js'
 import { useMoney } from '../../hooks/useMoney.js'
 import {
@@ -63,7 +64,9 @@ export default function Step4Confirm() {
       <div className="card confirm-block">
         {snapshot.map((it) => (
           <div key={it.productId} className="confirm-item">
-            <span aria-hidden="true">{it.emoji}</span>
+            <span className={'mini-thumb mini-thumb--' + (it.tone || 'brown')} aria-hidden="true">
+              <Icon name={it.icon} size={18} strokeWidth={1.8} />
+            </span>
             <span className="confirm-item__name">
               {localizeEntity(it, lng).name} × {it.qty}
             </span>

@@ -13,7 +13,7 @@ export default function ProductCard({ product }) {
   return (
     <Link to={`/product/${product.id}`} className="product-card card">
       <div className="product-card__media">
-        <Thumb emoji={product.emoji} tone={product.tone} ariaLabel={product.name} />
+        <Thumb icon={product.icon} tone={product.tone} ariaLabel={product.name} />
         <div className="product-card__fav">
           <FavoriteButton productId={product.id} />
         </div>

@@ -1,6 +1,8 @@
-// Branded gradient tile with a centered emoji — our stand-in for product/farmer photos
-// (no binary photo assets; fully offline-safe). `shape`: tile | circle | cover.
-export default function Thumb({ emoji, tone = 'brown', shape = 'tile', size, className = '', ariaLabel }) {
+import Icon from '../ui/Icon.jsx'
+
+// Branded gradient tile with a centered line icon — our stand-in for product/farmer
+// photos (no binary assets; fully offline-safe). `shape`: tile | circle | cover.
+export default function Thumb({ icon, tone = 'brown', shape = 'tile', size, className = '', ariaLabel }) {
   return (
     <div
       className={['thumb', `thumb--${tone}`, `thumb--${shape}`, className].filter(Boolean).join(' ')}
@@ -8,9 +10,7 @@ export default function Thumb({ emoji, tone = 'brown', shape = 'tile', size, cla
       role="img"
       aria-label={ariaLabel}
     >
-      <span className="thumb__emoji" aria-hidden="true">
-        {emoji}
-      </span>
+      <Icon name={icon} className="thumb__icon" strokeWidth={1.4} />
     </div>
   )
 }

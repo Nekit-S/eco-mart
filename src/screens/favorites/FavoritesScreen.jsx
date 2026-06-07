@@ -32,7 +32,7 @@ export default function FavoritesScreen() {
           </div>
         ) : (
           <EmptyState
-            emoji="♡"
+            icon="heart"
             title={t('favorites:empty.title')}
             subtitle={t('favorites:empty.sub')}
             action={<Button onClick={() => navigate('/catalog')}>{t('common:button.toCatalog')}</Button>}

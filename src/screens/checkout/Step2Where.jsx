@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import Button from '../../components/ui/Button.jsx'
+import Icon from '../../components/ui/Icon.jsx'
 import { useLang } from '../../hooks/useLang.js'
 import { useCartStore } from '../../store/useCartStore.js'
 import { getPickupPoints, localizeList } from '../../data/index.js'
@@ -46,7 +47,7 @@ export default function Step2Where() {
                 className={'option card' + (pickupPointId === p.id ? ' is-active' : '')}
                 onClick={() => setPickupPoint(p.id)}
               >
-                <span className="option__emoji" aria-hidden="true">🏪</span>
+                <span className="option__icon" aria-hidden="true"><Icon name="store" size={24} /></span>
                 <span className="option__body">
                   <strong>{p.name}</strong>
                   <span className="t-caption">{p.address} · {p.hours}</span>

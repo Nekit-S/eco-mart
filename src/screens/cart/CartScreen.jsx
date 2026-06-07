@@ -6,6 +6,7 @@ import Page from '../../components/layout/Page.jsx'
 import Thumb from '../../components/product/Thumb.jsx'
 import QtyStepper from '../../components/ui/QtyStepper.jsx'
 import Button from '../../components/ui/Button.jsx'
+import Icon from '../../components/ui/Icon.jsx'
 import EmptyState from '../../components/feedback/EmptyState.jsx'
 import { useLang } from '../../hooks/useLang.js'
 import { useMoney } from '../../hooks/useMoney.js'
@@ -51,7 +52,7 @@ export default function CartScreen() {
         <AppHeader title={t('cart:title')} />
         <Page>
           <EmptyState
-            emoji="🛒"
+            icon="cart"
             title={t('cart:empty.title')}
             subtitle={t('cart:empty.sub')}
             action={<Button onClick={() => navigate('/catalog')}>{t('common:button.toCatalog')}</Button>}
@@ -71,7 +72,7 @@ export default function CartScreen() {
             if (!p) return null
             return (
               <div key={it.productId} className="cart-item card">
-                <Thumb emoji={p.emoji} tone={p.tone} shape="circle" size={56} ariaLabel={p.name} />
+                <Thumb icon={p.icon} tone={p.tone} shape="circle" size={56} ariaLabel={p.name} />
                 <div className="cart-item__body">
                   <strong className="cart-item__name">{p.name}</strong>
                   <span className="t-caption">{money(p.price)}</span>
@@ -109,8 +110,8 @@ export default function CartScreen() {
           <p className={'promo-msg ' + (promoMsg.ok ? 'promo-msg--ok' : 'promo-msg--err')}>
             {promoMsg.text}
             {promoCode && promoMsg.ok && (
-              <button className="promo-msg__clear" onClick={() => { clearPromo(); setPromoMsg(null); setPromoInput('') }}>
-                ✕
+              <button className="promo-msg__clear" aria-label={t('common:button.remove')} onClick={() => { clearPromo(); setPromoMsg(null); setPromoInput('') }}>
+                <Icon name="x" size={14} strokeWidth={2.2} />
               </button>
             )}
           </p>

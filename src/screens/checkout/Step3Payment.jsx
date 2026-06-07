@@ -2,6 +2,7 @@ import { useNavigate } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import Button from '../../components/ui/Button.jsx'
 import Badge from '../../components/ui/Badge.jsx'
+import Icon from '../../components/ui/Icon.jsx'
 import { useCartStore } from '../../store/useCartStore.js'
 import { PAYMENT } from '../../utils/constants.js'
 
@@ -12,8 +13,8 @@ export default function Step3Payment() {
   const setPayment = useCartStore((s) => s.setPayment)
 
   const OPTIONS = [
-    { type: PAYMENT.CASH, emoji: '💵', title: t('checkout:payment.cash') },
-    { type: PAYMENT.CARD_ON_DELIVERY, emoji: '💳', title: t('checkout:payment.card') },
+    { type: PAYMENT.CASH, icon: 'cash', title: t('checkout:payment.cash') },
+    { type: PAYMENT.CARD_ON_DELIVERY, icon: 'card', title: t('checkout:payment.card') },
   ]
 
   return (
@@ -27,16 +28,18 @@ export default function Step3Payment() {
             className={'option card' + (payment === o.type ? ' is-active' : '')}
             onClick={() => setPayment(o.type)}
           >
-            <span className="option__emoji" aria-hidden="true">{o.emoji}</span>
+            <span className="option__icon" aria-hidden="true"><Icon name={o.icon} size={24} /></span>
             <span className="option__body">
               <strong>{o.title}</strong>
             </span>
-            <span className="option__radio" aria-hidden="true">{payment === o.type ? '●' : '○'}</span>
+            <span className={'radio' + (payment === o.type ? ' radio--on' : '')} aria-hidden="true">
+              {payment === o.type && <Icon name="check" size={14} strokeWidth={2.4} />}
+            </span>
           </button>
         ))}
         {/* Online payment — post-MVP, disabled */}
         <div className="option card is-disabled" aria-disabled="true">
-          <span className="option__emoji" aria-hidden="true">🌐</span>
+          <span className="option__icon" aria-hidden="true"><Icon name="globe" size={24} /></span>
           <span className="option__body">
             <strong>{t('checkout:payment.online')}</strong>
           </span>

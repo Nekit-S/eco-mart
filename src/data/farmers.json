@@ -1,7 +1,7 @@
 [
   {
     "id": "f-01",
-    "emoji": "🧀",
+    "icon": "cheese",
     "tone": "honey",
     "established": 2016,
     "farmerOfWeek": true,
@@ -20,7 +20,7 @@
   },
   {
     "id": "f-02",
-    "emoji": "🍯",
+    "icon": "honey",
     "tone": "honey",
     "established": 2009,
     "farmerOfWeek": false,
@@ -39,7 +39,7 @@
   },
   {
     "id": "f-03",
-    "emoji": "🥐",
+    "icon": "croissant",
     "tone": "caramel",
     "established": 2019,
     "farmerOfWeek": false,
@@ -58,7 +58,7 @@
   },
   {
     "id": "f-04",
-    "emoji": "🌱",
+    "icon": "bean",
     "tone": "brown",
     "established": 2018,
     "farmerOfWeek": false,
@@ -77,7 +77,7 @@
   },
   {
     "id": "f-05",
-    "emoji": "🍓",
+    "icon": "berry",
     "tone": "berry",
     "established": 2014,
     "farmerOfWeek": false,
@@ -96,7 +96,7 @@
   },
   {
     "id": "f-06",
-    "emoji": "🥛",
+    "icon": "bottle",
     "tone": "cream",
     "established": 2012,
     "farmerOfWeek": false,

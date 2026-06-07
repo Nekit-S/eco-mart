@@ -2,12 +2,13 @@ import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import Button from '../../components/ui/Button.jsx'
+import Icon from '../../components/ui/Icon.jsx'
 import { useUiStore } from '../../store/useUiStore.js'
 
 const SLIDES = [
-  { key: 'slide1', emoji: '🧺' },
-  { key: 'slide2', emoji: '🌾' },
-  { key: 'slide3', emoji: '⚡' },
+  { key: 'slide1', icon: 'basket' },
+  { key: 'slide2', icon: 'sprout' },
+  { key: 'slide3', icon: 'spark' },
 ]
 
 export default function OnboardingScreen() {
@@ -30,7 +31,7 @@ export default function OnboardingScreen() {
       </button>
 
       <div className="onboarding__art" aria-hidden="true">
-        {slide.emoji}
+        <Icon name={slide.icon} size={104} strokeWidth={1.3} />
       </div>
       <div className="onboarding__copy">
         <h1 className="t-h1">{t(`onboarding:${slide.key}.title`)}</h1>

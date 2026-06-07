@@ -31,7 +31,7 @@ export default function OrderHistoryScreen() {
       <>
         <AppHeader title={t('order:history.title')} />
         <Page>
-          <EmptyState emoji="🧾" title={t('order:history.empty')} />
+          <EmptyState icon="receipt" title={t('order:history.empty')} />
         </Page>
       </>
     )

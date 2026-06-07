@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import Button from '../../components/ui/Button.jsx'
+import Icon from '../../components/ui/Icon.jsx'
 import { useUserStore } from '../../store/useUserStore.js'
 
 // Auth STUB — any input proceeds; guest option too. No real backend.
@@ -24,7 +25,7 @@ export default function AuthStubScreen() {
   return (
     <div className="auth">
       <div className="auth__head">
-        <span className="auth__logo" aria-hidden="true">☕</span>
+        <span className="auth__logo" aria-hidden="true"><Icon name="cup" size={34} strokeWidth={1.6} /></span>
         <h1 className="t-h1">{t('auth:title')}</h1>
         <p className="t-caption">{t('auth:subtitle')}</p>
       </div>

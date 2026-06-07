@@ -4,6 +4,7 @@ import AppHeader from '../../components/layout/AppHeader.jsx'
 import Page from '../../components/layout/Page.jsx'
 import Section from '../../components/layout/Section.jsx'
 import Button from '../../components/ui/Button.jsx'
+import Icon from '../../components/ui/Icon.jsx'
 import { useToast } from '../../hooks/useToast.js'
 
 function FaqItem({ q, a }) {
@@ -12,7 +13,7 @@ function FaqItem({ q, a }) {
     <div className={'faq card' + (open ? ' is-open' : '')}>
       <button className="faq__q" onClick={() => setOpen(!open)} aria-expanded={open}>
         <span>{q}</span>
-        <span className="faq__chev" aria-hidden="true">{open ? '−' : '+'}</span>
+        <Icon name={open ? 'minus' : 'plus'} size={18} strokeWidth={2.2} className="faq__chev" />
       </button>
       {open && <p className="faq__a t-body">{a}</p>}
     </div>

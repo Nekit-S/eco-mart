@@ -41,7 +41,7 @@ export default function ProductDetailScreen() {
       <>
         <AppHeader back />
         <Page>
-          <EmptyState emoji="🧭" title={t('catalog:empty.title')} />
+          <EmptyState icon="search" title={t('catalog:empty.title')} />
         </Page>
       </>
     )
@@ -60,7 +60,7 @@ export default function ProductDetailScreen() {
     <>
       <AppHeader back right={<FavoriteButton productId={product.id} />} />
       <Page className="product-detail">
-        <Thumb emoji={product.emoji} tone={product.tone} shape="cover" ariaLabel={product.name} />
+        <Thumb icon={product.icon} tone={product.tone} shape="cover" ariaLabel={product.name} />
 
         <div className="pd-head">
           <h1 className="t-h1">{product.name}</h1>

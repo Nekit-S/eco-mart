@@ -137,7 +137,7 @@ export function buildSnapshotItems(items) {
         qty: i.qty,
         priceSnapshot: p.price,
         name: p.name,
-        emoji: p.emoji,
+        icon: p.icon,
         tone: p.tone,
         comment: i.comment || '',
       }

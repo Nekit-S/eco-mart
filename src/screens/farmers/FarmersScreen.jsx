@@ -3,6 +3,7 @@ import AppHeader from '../../components/layout/AppHeader.jsx'
 import Page from '../../components/layout/Page.jsx'
 import FarmerCard from '../../components/farmer/FarmerCard.jsx'
 import Badge from '../../components/ui/Badge.jsx'
+import Icon from '../../components/ui/Icon.jsx'
 import { useLang } from '../../hooks/useLang.js'
 import { getFarmers, localizeList } from '../../data/index.js'
 
@@ -20,7 +21,7 @@ export default function FarmersScreen() {
             <div key={f.id} className="farmer-list__item">
               {f.farmerOfWeek && (
                 <div className="farmer-list__tag">
-                  <Badge tone="accent">⭐ {t('farmer:ofWeek')}</Badge>
+                  <Badge tone="accent"><Icon name="star" size={13} filled strokeWidth={1.6} /> {t('farmer:ofWeek')}</Badge>
                 </div>
               )}
               <FarmerCard farmer={f} />

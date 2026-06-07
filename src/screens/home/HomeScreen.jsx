@@ -1,3 +1,4 @@
+import { useRef } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import AppHeader from '../../components/layout/AppHeader.jsx'
@@ -9,6 +10,7 @@ import FarmerCard from '../../components/farmer/FarmerCard.jsx'
 import LanguageSwitcher from '../../components/ui/LanguageSwitcher.jsx'
 import ThemeToggle from '../../components/ui/ThemeToggle.jsx'
 import Button from '../../components/ui/Button.jsx'
+import Icon from '../../components/ui/Icon.jsx'
 import { useLang } from '../../hooks/useLang.js'
 import { useMoney } from '../../hooks/useMoney.js'
 import {
@@ -20,6 +22,7 @@ import {
 } from '../../data/index.js'
 import { useOrdersStore, selectLastOrder } from '../../store/useOrdersStore.js'
 import { useCartStore } from '../../store/useCartStore.js'
+import { gsap, useGSAP } from '../../lib/gsap.js'
 
 export default function HomeScreen() {
   const { t } = useTranslation()
@@ -39,10 +42,35 @@ export default function HomeScreen() {
     navigate('/cart')
   }
 
+  // Stagger the home sections in on mount (reduced-motion → shown instantly).
+  const revealRef = useRef(null)
+  useGSAP(
+    () => {
+      const mm = gsap.matchMedia()
+      mm.add(
+        { reduce: '(prefers-reduced-motion: reduce)', ok: '(prefers-reduced-motion: no-preference)' },
+        (ctx) => {
+          const kids = revealRef.current ? Array.from(revealRef.current.children) : []
+          if (ctx.conditions.reduce) {
+            gsap.set(kids, { autoAlpha: 1, y: 0 })
+            return
+          }
+          gsap.from(kids, { autoAlpha: 0, y: 18, stagger: 0.07, duration: 0.32 })
+        },
+      )
+    },
+    { scope: revealRef, dependencies: [lng] },
+  )
+
   return (
     <>
       <AppHeader
-        title={<span className="brand-mark">🌿 Ferma</span>}
+        title={
+          <span className="brand-mark">
+            <Icon name="leaf" size={22} className="brand-mark__leaf" />
+            Ferma
+          </span>
+        }
         right={
           <>
             <LanguageSwitcher compact />
@@ -50,14 +78,17 @@ export default function HomeScreen() {
           </>
         }
       />
-      <Page>
+      <Page entrance="none">
+        <div ref={revealRef} style={{ display: 'contents' }}>
         {/* Repeat last order (scenario 4) */}
         {lastOrder && (
           <Section title={t('home:section.repeat')}>
             <div className="card repeat-card">
-              <div className="repeat-card__emojis" aria-hidden="true">
+              <div className="repeat-card__icons" aria-hidden="true">
                 {lastOrder.items.slice(0, 3).map((it, i) => (
-                  <span key={i}>{it.emoji}</span>
+                  <span key={i} className={'mini-thumb mini-thumb--' + (it.tone || 'brown')}>
+                    <Icon name={it.icon} size={18} strokeWidth={1.8} />
+                  </span>
                 ))}
               </div>
               <div className="repeat-card__body">
@@ -79,7 +110,7 @@ export default function HomeScreen() {
             {categories.map((c) => (
               <CategoryChip
                 key={c.id}
-                emoji={c.emoji}
+                icon={c.icon}
                 onClick={() => navigate(`/catalog?cat=${c.id}`)}
               >
                 {c.name}
@@ -94,7 +125,9 @@ export default function HomeScreen() {
             <strong>{t('home:banner.title')}</strong>
             <span className="t-caption">{t('home:banner.subtitle')}</span>
           </div>
-          <span className="banner__emoji" aria-hidden="true">🌿</span>
+          <span className="banner__emoji" aria-hidden="true">
+            <Icon name="leaf" size={34} strokeWidth={1.6} />
+          </span>
         </div>
 
         {/* Popular */}
@@ -117,6 +150,7 @@ export default function HomeScreen() {
         <Section title={t('home:section.farmerOfWeek')}>
           {farmer && <FarmerCard farmer={farmer} />}
         </Section>
+        </div>
       </Page>
     </>
   )
