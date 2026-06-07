@@ -81,7 +81,11 @@ export default function Step4Confirm() {
             {isPickup ? t('checkout:confirm.pickupAt') : t('checkout:confirm.deliverTo')}
           </span>
           <span>
-            {isPickup ? `${point?.name} · ${t('checkout:timeReady', { time: timeSlot })}` : address}
+            {isPickup
+              ? point
+                ? `${point.name} · ${t('checkout:timeReady', { time: timeSlot })}`
+                : t('checkout:validation.pickup')
+              : address}
           </span>
         </div>
         <div className="confirm-row">

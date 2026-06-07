@@ -208,6 +208,7 @@
 .order-row { display: grid; gap: var(--sp-2); padding: var(--sp-4); }
 .order-row__top { display: flex; align-items: center; justify-content: space-between; }
 .order-row__bottom { display: flex; align-items: center; justify-content: space-between; gap: var(--sp-2); }
+.order-row__actions { display: flex; gap: var(--sp-2); }
 
 /* ===== Profile ===== */
 .profile-card { display: flex; align-items: center; gap: var(--sp-3); padding: var(--sp-4); }

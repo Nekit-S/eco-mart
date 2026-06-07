@@ -20,5 +20,3 @@ export const useFavoritesStore = create(
     },
   ),
 )
-
-export const selectFavCount = (s) => s.ids.length

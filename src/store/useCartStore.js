@@ -50,11 +50,6 @@ export const useCartStore = create(
       incQty: (productId) => get().setQty(productId, (getItemQty(get(), productId) || 0) + 1),
       decQty: (productId) => get().setQty(productId, (getItemQty(get(), productId) || 0) - 1),
 
-      setComment: (productId, comment) =>
-        set((s) => ({
-          items: s.items.map((i) => (i.productId === productId ? { ...i, comment } : i)),
-        })),
-
       // Returns { ok, error?, promo? } for UI feedback. Sets promoCode only when valid.
       applyPromo: (code) => {
         const promo = getPromoByCode(code)

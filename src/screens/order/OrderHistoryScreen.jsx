@@ -54,7 +54,7 @@ export default function OrderHistoryScreen() {
               </span>
               <div className="order-row__bottom">
                 <strong className="t-price">{money(o.total)}</strong>
-                <div style={{ display: 'flex', gap: 8 }}>
+                <div className="order-row__actions">
                   <Button size="sm" variant="secondary" onClick={() => navigate(`/orders/${o.id}`)}>
                     {t('order:trackTitle')}
                   </Button>

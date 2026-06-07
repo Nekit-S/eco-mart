@@ -23,19 +23,6 @@ export function SkeletonProductCard() {
   )
 }
 
-export function SkeletonFarmerCard() {
-  return (
-    <div className="card farmer-card" aria-hidden="true">
-      <Skeleton width={56} height={56} radius="999px" />
-      <div className="farmer-card__body" style={{ display: 'grid', gap: 8, flex: 1 }}>
-        <Skeleton width="70%" height={16} />
-        <Skeleton width="45%" height={12} />
-        <Skeleton width="90%" height={12} />
-      </div>
-    </div>
-  )
-}
-
 // Grid of product skeletons for catalog/home loading states.
 export function SkeletonGrid({ count = 4 }) {
   return (

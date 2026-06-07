@@ -1,12 +1,5 @@
 // Domain enums shared across data, stores and screens.
 
-export const CATEGORY = {
-  COFFEE: 'coffee',
-  FOOD: 'food',
-  BAKERY: 'bakery',
-  FARM: 'farm',
-}
-
 export const FULFILLMENT = {
   DELIVERY: 'delivery',
   PICKUP: 'pickup',

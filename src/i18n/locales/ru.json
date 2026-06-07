@@ -2,26 +2,17 @@
   "common": {
     "app.name": "The Ferma Coffee",
     "app.tagline": "От фермы до твоего стола",
-    "button.add": "Добавить",
     "button.addToCart": "В корзину",
-    "button.inCart": "В корзине",
-    "button.checkout": "Оформить заказ",
     "button.continue": "Продолжить",
     "button.next": "Далее",
-    "button.back": "Назад",
-    "button.confirm": "Подтвердить",
     "button.repeat": "Повторить",
-    "button.repeatOrder": "Повторить заказ",
     "button.viewAll": "Все",
     "button.apply": "Применить",
-    "button.save": "Сохранить",
-    "button.cancel": "Отмена",
     "button.retry": "Повторить попытку",
     "button.remove": "Удалить",
     "button.skip": "Пропустить",
     "button.start": "Начать",
     "button.toCatalog": "В каталог",
-    "state.loading": "Загрузка…",
     "state.error.title": "Что-то пошло не так",
     "state.error.network": "Не удалось загрузить. Проверьте соединение и повторите.",
     "unit.ml": "мл",
@@ -33,7 +24,6 @@
     "label.composition": "Состав",
     "label.weight": "Вес",
     "label.shelfLife": "Срок хранения",
-    "label.region": "Регион",
     "label.subtotal": "Сумма",
     "label.discount": "Скидка",
     "label.total": "Итого"
@@ -57,21 +47,18 @@
     "title": "Вход",
     "subtitle": "Введите номер телефона или email — это демо, реальная отправка не требуется.",
     "phone": "Номер телефона",
-    "email": "Email",
     "continue": "Продолжить",
     "guest": "Продолжить как гость",
     "consent": "Продолжая, вы соглашаетесь с обработкой персональных данных."
   },
   "home": {
-    "greeting": "Доброе утро ☕",
     "section.repeat": "Повторить заказ",
     "section.categories": "Категории",
     "section.recommended": "Популярное",
     "section.farmerOfWeek": "Фермер недели",
     "banner.title": "Локальные продукты с историей",
     "banner.subtitle": "Поддержите фермеров своего города",
-    "repeat.cta": "Повторить",
-    "repeat.empty": "Здесь появятся ваши прошлые заказы"
+    "repeat.cta": "Повторить"
   },
   "catalog": {
     "title": "Каталог",
@@ -83,8 +70,7 @@
   "product": {
     "related": "С этим берут",
     "favorite": "В избранное",
-    "addedToast": "Добавлено в корзину",
-    "from": "от"
+    "addedToast": "Добавлено в корзину"
   },
   "farmer": {
     "title": "Фермеры",
@@ -99,16 +85,11 @@
     "title": "Корзина",
     "empty.title": "В корзине пока тихо",
     "empty.sub": "Добавьте кофе или фермерские продукты",
-    "comment": "Комментарий к товару",
     "promo.placeholder": "Промокод",
     "promo.applied": "Промокод применён",
     "promo.notFound": "Промокод не найден",
     "promo.expired": "Срок действия промокода истёк",
-    "checkout": "Перейти к оформлению",
-    "itemsCount_one": "{{count}} товар",
-    "itemsCount_few": "{{count}} товара",
-    "itemsCount_many": "{{count}} товаров",
-    "itemsCount_other": "{{count}} товара"
+    "checkout": "Перейти к оформлению"
   },
   "checkout": {
     "title": "Оформление",
@@ -147,8 +128,6 @@
     "advance": "Следующий статус (демо)",
     "history.title": "Мои заказы",
     "history.empty": "У вас пока нет заказов",
-    "deliverTo": "Доставка",
-    "pickupAt": "Самовывоз",
     "status.created": "Создан",
     "status.accepted": "Принят",
     "status.preparing": "Готовится",

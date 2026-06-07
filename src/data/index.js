@@ -32,13 +32,10 @@ export const localizeList = (list, lng) => list.map((e) => localizeEntity(e, lng
 
 // ---- Categories ----
 export const getCategories = () => categories
-export const getCategory = (id) => categories.find((c) => c.id === id) || null
 
 // ---- Products ----
 export const getProducts = () => products
 export const getProduct = (id) => products.find((p) => p.id === id) || null
-export const getProductsByCategory = (categoryId) =>
-  products.filter((p) => p.categoryId === categoryId)
 export const getProductsByFarmer = (farmerId) =>
   products.filter((p) => p.farmerId === farmerId)
 export const getPopularProducts = () =>
@@ -57,7 +54,6 @@ export const getFarmerOfWeek = () =>
   farmers.find((f) => f.farmerOfWeek) || farmers[0] || null
 
 // ---- Promos ----
-export const getPromos = () => promos
 export const getPromoByCode = (code) =>
   promos.find((p) => p.code.toUpperCase() === String(code || '').trim().toUpperCase()) || null
 

@@ -2,26 +2,17 @@
   "common": {
     "app.name": "The Ferma Coffee",
     "app.tagline": "Фермадан дастарханыңызға",
-    "button.add": "Қосу",
     "button.addToCart": "Себетке қосу",
-    "button.inCart": "Себетте",
-    "button.checkout": "Тапсырысты рәсімдеу",
     "button.continue": "Жалғастыру",
     "button.next": "Келесі",
-    "button.back": "Артқа",
-    "button.confirm": "Растау",
     "button.repeat": "Қайталау",
-    "button.repeatOrder": "Тапсырысты қайталау",
     "button.viewAll": "Барлығы",
     "button.apply": "Қолдану",
-    "button.save": "Сақтау",
-    "button.cancel": "Болдырмау",
     "button.retry": "Қайта көру",
     "button.remove": "Жою",
     "button.skip": "Өткізу",
     "button.start": "Бастау",
     "button.toCatalog": "Каталогқа",
-    "state.loading": "Жүктелуде…",
     "state.error.title": "Бірдеңе дұрыс болмады",
     "state.error.network": "Жүктеу мүмкін болмады. Байланысты тексеріп, қайталаңыз.",
     "unit.ml": "мл",
@@ -33,7 +24,6 @@
     "label.composition": "Құрамы",
     "label.weight": "Салмағы",
     "label.shelfLife": "Сақтау мерзімі",
-    "label.region": "Аймақ",
     "label.subtotal": "Сомасы",
     "label.discount": "Жеңілдік",
     "label.total": "Барлығы"
@@ -57,21 +47,18 @@
     "title": "Кіру",
     "subtitle": "Телефон нөмірін немесе email енгізіңіз — бұл демо, нақты жіберу қажет емес.",
     "phone": "Телефон нөмірі",
-    "email": "Email",
     "continue": "Жалғастыру",
     "guest": "Қонақ ретінде жалғастыру",
     "consent": "Жалғастыру арқылы дербес деректерді өңдеуге келісесіз."
   },
   "home": {
-    "greeting": "Қайырлы таң ☕",
     "section.repeat": "Тапсырысты қайталау",
     "section.categories": "Санаттар",
     "section.recommended": "Танымал",
     "section.farmerOfWeek": "Апта фермері",
     "banner.title": "Тарихы бар жергілікті өнімдер",
     "banner.subtitle": "Қалаңыздың фермерлерін қолдаңыз",
-    "repeat.cta": "Қайталау",
-    "repeat.empty": "Мұнда өткен тапсырыстарыңыз көрінеді"
+    "repeat.cta": "Қайталау"
   },
   "catalog": {
     "title": "Каталог",
@@ -83,8 +70,7 @@
   "product": {
     "related": "Бұнымен бірге алады",
     "favorite": "Таңдаулыға",
-    "addedToast": "Себетке қосылды",
-    "from": "бастап"
+    "addedToast": "Себетке қосылды"
   },
   "farmer": {
     "title": "Фермерлер",
@@ -99,14 +85,11 @@
     "title": "Себет",
     "empty.title": "Себетте әзірге тыныш",
     "empty.sub": "Кофе немесе фермерлік өнім қосыңыз",
-    "comment": "Тауарға түсініктеме",
     "promo.placeholder": "Промокод",
     "promo.applied": "Промокод қолданылды",
     "promo.notFound": "Промокод табылмады",
     "promo.expired": "Промокодтың мерзімі аяқталды",
-    "checkout": "Рәсімдеуге өту",
-    "itemsCount_one": "{{count}} тауар",
-    "itemsCount_other": "{{count}} тауар"
+    "checkout": "Рәсімдеуге өту"
   },
   "checkout": {
     "title": "Рәсімдеу",
@@ -145,8 +128,6 @@
     "advance": "Келесі күй (демо)",
     "history.title": "Менің тапсырыстарым",
     "history.empty": "Сізде әзірге тапсырыс жоқ",
-    "deliverTo": "Жеткізу",
-    "pickupAt": "Өзі алып кету",
     "status.created": "Құрылды",
     "status.accepted": "Қабылданды",
     "status.preparing": "Дайындалуда",

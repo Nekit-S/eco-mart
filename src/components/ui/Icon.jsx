@@ -119,12 +119,6 @@ const P = {
       <path d="M12 7.5V12l3 2" />
     </>
   ),
-  repeat: (
-    <>
-      <path d="M4 9a6 6 0 0 1 10-3l2 2M20 15a6 6 0 0 1-10 3l-2-2" />
-      <path d="M16 4v4h-4M8 20v-4h4" />
-    </>
-  ),
   spark: <path d="M12 3v6M12 15v6M3 12h6M15 12h6M6 6l3 3M15 15l3 3M18 6l-3 3M9 15l-3 3" />,
   alert: (
     <>

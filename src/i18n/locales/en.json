@@ -2,26 +2,17 @@
   "common": {
     "app.name": "The Ferma Coffee",
     "app.tagline": "From local farms to your coffee table",
-    "button.add": "Add",
     "button.addToCart": "Add to cart",
-    "button.inCart": "In cart",
-    "button.checkout": "Checkout",
     "button.continue": "Continue",
     "button.next": "Next",
-    "button.back": "Back",
-    "button.confirm": "Confirm",
     "button.repeat": "Repeat",
-    "button.repeatOrder": "Repeat order",
     "button.viewAll": "See all",
     "button.apply": "Apply",
-    "button.save": "Save",
-    "button.cancel": "Cancel",
     "button.retry": "Try again",
     "button.remove": "Remove",
     "button.skip": "Skip",
     "button.start": "Get started",
     "button.toCatalog": "Browse catalog",
-    "state.loading": "Loading…",
     "state.error.title": "Something went wrong",
     "state.error.network": "Couldn't load. Check your connection and try again.",
     "unit.ml": "ml",
@@ -33,7 +24,6 @@
     "label.composition": "Ingredients",
     "label.weight": "Weight",
     "label.shelfLife": "Shelf life",
-    "label.region": "Region",
     "label.subtotal": "Subtotal",
     "label.discount": "Discount",
     "label.total": "Total"
@@ -57,21 +47,18 @@
     "title": "Sign in",
     "subtitle": "Enter a phone number or email — this is a demo, no real submission needed.",
     "phone": "Phone number",
-    "email": "Email",
     "continue": "Continue",
     "guest": "Continue as guest",
     "consent": "By continuing you agree to the processing of personal data."
   },
   "home": {
-    "greeting": "Good morning ☕",
     "section.repeat": "Repeat order",
     "section.categories": "Categories",
     "section.recommended": "Popular",
     "section.farmerOfWeek": "Farmer of the week",
     "banner.title": "Local products with a story",
     "banner.subtitle": "Support the farmers of your city",
-    "repeat.cta": "Repeat",
-    "repeat.empty": "Your past orders will appear here"
+    "repeat.cta": "Repeat"
   },
   "catalog": {
     "title": "Catalog",
@@ -83,8 +70,7 @@
   "product": {
     "related": "Goes well with",
     "favorite": "Add to favorites",
-    "addedToast": "Added to cart",
-    "from": "from"
+    "addedToast": "Added to cart"
   },
   "farmer": {
     "title": "Farmers",
@@ -99,14 +85,11 @@
     "title": "Cart",
     "empty.title": "Your cart is quiet for now",
     "empty.sub": "Add some coffee or farm products",
-    "comment": "Item comment",
     "promo.placeholder": "Promo code",
     "promo.applied": "Promo code applied",
     "promo.notFound": "Promo code not found",
     "promo.expired": "This promo code has expired",
-    "checkout": "Go to checkout",
-    "itemsCount_one": "{{count}} item",
-    "itemsCount_other": "{{count}} items"
+    "checkout": "Go to checkout"
   },
   "checkout": {
     "title": "Checkout",
@@ -145,8 +128,6 @@
     "advance": "Next status (demo)",
     "history.title": "My orders",
     "history.empty": "You have no orders yet",
-    "deliverTo": "Delivery",
-    "pickupAt": "Pickup",
     "status.created": "Created",
     "status.accepted": "Accepted",
     "status.preparing": "Preparing",

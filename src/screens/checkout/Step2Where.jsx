@@ -45,7 +45,10 @@ export default function Step2Where() {
                 key={p.id}
                 type="button"
                 className={'option card' + (pickupPointId === p.id ? ' is-active' : '')}
-                onClick={() => setPickupPoint(p.id)}
+                onClick={() => {
+                  setPickupPoint(p.id)
+                  setTimeSlot(null)
+                }}
               >
                 <span className="option__icon" aria-hidden="true"><Icon name="store" size={24} /></span>
                 <span className="option__body">

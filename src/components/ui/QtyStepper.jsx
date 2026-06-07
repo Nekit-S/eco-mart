@@ -1,7 +1,7 @@
 import Icon from './Icon.jsx'
 
 // Quantity stepper.
-export default function QtyStepper({ value, onInc, onDec, min = 1, size = 'md' }) {
+export default function QtyStepper({ value, onInc, onDec, size = 'md' }) {
   return (
     <div className={'qty qty--' + size} role="group" aria-label="Количество">
       <button type="button" className="qty__btn" onClick={onDec} aria-label="−">
