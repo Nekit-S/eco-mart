@@ -11,6 +11,9 @@ dist-ssr
 # vercel
 .vercel
 
+# release artifacts
+release
+
 # env
 .env
 .env.*
