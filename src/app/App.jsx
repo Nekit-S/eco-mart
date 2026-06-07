@@ -1,15 +1,15 @@
 import { useEffect } from 'react'
-import { Outlet } from 'react-router-dom'
+import { Outlet, useLocation } from 'react-router-dom'
 import { useUiStore } from '../store/useUiStore.js'
 import { useOrdersStore } from '../store/useOrdersStore.js'
-import DemoTimer from '../components/dev/DemoTimer.jsx'
 
 // Root route element: global side-effects (theme bootstrap + OS-scheme sync + order
-// seeding) then renders the nested layout/screen via <Outlet/>.
+// seeding) and scroll-to-top on navigation. Renders the nested layout/screen.
 export default function App() {
   const theme = useUiStore((s) => s.theme)
   const setTheme = useUiStore((s) => s.setTheme)
   const syncSystem = useUiStore((s) => s.syncSystem)
+  const { pathname } = useLocation()
 
   useEffect(() => {
     setTheme(theme)
@@ -21,10 +21,12 @@ export default function App() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
-  return (
-    <>
-      <Outlet />
-      <DemoTimer />
-    </>
-  )
+  // Reset scroll to the top of the active screen on every navigation (incl. switching
+  // between products via "related" — same route, changing param).
+  useEffect(() => {
+    const el = document.querySelector('.app-main')
+    if (el) el.scrollTo({ top: 0, left: 0 })
+  }, [pathname])
+
+  return <Outlet />
 }

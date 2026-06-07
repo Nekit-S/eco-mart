@@ -16,8 +16,6 @@ export default function SettingsScreen() {
   const setTheme = useUiStore((s) => s.setTheme)
   const notifications = useUiStore((s) => s.notifications)
   const setNotification = useUiStore((s) => s.setNotification)
-  const demoTimer = useUiStore((s) => s.demoTimer)
-  const setDemoTimer = useUiStore((s) => s.setDemoTimer)
   const logout = useUserStore((s) => s.logout)
 
   const THEMES = [
@@ -61,12 +59,6 @@ export default function SettingsScreen() {
               label={t('profile:notif.promos')}
               checked={notifications.promos}
               onChange={(v) => setNotification('promos', v)}
-            />
-            <Toggle
-              id="demo-timer"
-              label={t('profile:demoTimer')}
-              checked={demoTimer}
-              onChange={setDemoTimer}
             />
           </div>
         </Section>

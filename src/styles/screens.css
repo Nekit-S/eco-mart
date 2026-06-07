@@ -228,23 +228,3 @@
 .faq__a { padding: 0 var(--sp-4) var(--sp-4); color: var(--c-text-2); }
 .support-form { display: grid; gap: var(--sp-3); }
 
-/* ===== Demo stopwatch overlay ===== */
-.demo-timer {
-  position: fixed;
-  top: calc(env(safe-area-inset-top, 0) + 8px);
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: var(--z-toast);
-  display: flex;
-  align-items: center;
-  gap: var(--sp-2);
-  padding: 6px var(--sp-3);
-  border-radius: var(--radius-pill);
-  background: var(--c-text);
-  color: var(--c-bg);
-  box-shadow: var(--shadow-lg);
-  font-variant-numeric: tabular-nums;
-}
-.demo-timer__val { font-weight: var(--fw-bold); min-width: 52px; text-align: center; }
-.demo-timer button { color: var(--c-bg); font-size: 16px; width: 28px; height: 28px; }
-

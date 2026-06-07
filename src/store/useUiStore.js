@@ -28,7 +28,6 @@ export const useUiStore = create(
       resolvedTheme: 'light',
       onboardingSeen: false,
       notifications: { orders: true, promos: false },
-      demoTimer: false, // dev stopwatch overlay (M8)
 
       setTheme: (theme) => {
         const resolvedTheme = applyTheme(theme)
@@ -50,7 +49,6 @@ export const useUiStore = create(
       setOnboardingSeen: (v = true) => set({ onboardingSeen: v }),
       setNotification: (key, value) =>
         set((s) => ({ notifications: { ...s.notifications, [key]: value } })),
-      setDemoTimer: (v) => set({ demoTimer: v }),
     }),
     {
       name: 'ferma:ui',
@@ -59,7 +57,6 @@ export const useUiStore = create(
         theme: s.theme,
         onboardingSeen: s.onboardingSeen,
         notifications: s.notifications,
-        demoTimer: s.demoTimer,
       }),
       onRehydrateStorage: () => (state) => {
         // Sync resolvedTheme to the persisted preference right after hydration.

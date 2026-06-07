@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import AppHeader from '../../components/layout/AppHeader.jsx'
@@ -35,6 +35,9 @@ export default function ProductDetailScreen() {
   const toast = useToast()
   const [qty, setQty] = useState(1)
 
+  // Reset quantity when navigating to another product (e.g. via "related").
+  useEffect(() => setQty(1), [productId])
+
   const raw = getProduct(productId)
   if (!raw) {
     return (
@@ -59,7 +62,7 @@ export default function ProductDetailScreen() {
   return (
     <>
       <AppHeader back right={<FavoriteButton productId={product.id} />} />
-      <Page className="product-detail">
+      <Page key={product.id} className="product-detail">
         <Thumb icon={product.icon} tone={product.tone} shape="cover" ariaLabel={product.name} />
 
         <div className="pd-head">
