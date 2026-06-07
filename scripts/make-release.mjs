@@ -29,8 +29,25 @@ const BASENAME = `${pkg.name}-v${pkg.version}-src`
 const OUT_DIR = join(ROOT, 'release')
 const STAGE = join(OUT_DIR, BASENAME)
 
-const EXCLUDE_DIRS = new Set(['node_modules', 'dist', '.git', '.vercel', 'release', '.idea', '.vscode'])
-const EXCLUDE_FILE = (name) => name.endsWith('.log') || name === '.DS_Store'
+// Excluded so the archive is ONLY the runnable project — no tooling, CI, or junk.
+const EXCLUDE_DIRS = new Set([
+  'node_modules', 'dist', '.git', '.vercel', 'release', '.idea', '.vscode',
+  '.github', 'scripts',
+])
+const EXCLUDE_FILE = (name) =>
+  name.endsWith('.log') || name === '.DS_Store' || name === 'package-lock.json'
+
+// package.json in the archive drops the release tooling (script + its dev deps) so the
+// handover lists only what the app itself needs.
+function cleanPackageJson(code) {
+  const j = JSON.parse(code)
+  if (j.scripts) delete j.scripts['release:zip']
+  if (j.devDependencies) {
+    delete j.devDependencies['@babel/parser']
+    delete j.devDependencies['adm-zip']
+  }
+  return JSON.stringify(j, null, 2) + '\n'
+}
 
 const TEXT_PASS = new Set(['.json', '.webmanifest', '.md', '.txt', '.yml', '.yaml'])
 const BINARY = new Set(['.woff2', '.woff', '.ttf', '.png', '.jpg', '.jpeg', '.ico', '.webp', '.gif'])
@@ -120,7 +137,7 @@ let count = 0
 
 for (const abs of files) {
   const rel = relative(ROOT, abs)
-  const content = transform(abs)
+  const content = rel === 'package.json' ? cleanPackageJson(readFileSync(abs, 'utf8')) : transform(abs)
   const outPath = join(STAGE, rel)
   mkdirSync(join(outPath, '..'), { recursive: true })
   writeFileSync(outPath, content)
