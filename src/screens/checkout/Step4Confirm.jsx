@@ -26,6 +26,7 @@ export default function Step4Confirm() {
   const items = useCartStore((s) => s.items)
   const fulfillmentType = useCartStore((s) => s.fulfillment)
   const address = useCartStore((s) => s.address)
+  const addressCoords = useCartStore((s) => s.addressCoords)
   const pickupPointId = useCartStore((s) => s.pickupPointId)
   const timeSlot = useCartStore((s) => s.timeSlot)
   const payment = useCartStore((s) => s.payment)
@@ -43,7 +44,7 @@ export default function Step4Confirm() {
   const place = () => {
     const fulfillment = isPickup
       ? { type: FULFILLMENT.PICKUP, pickupPointId, timeSlot }
-      : { type: FULFILLMENT.DELIVERY, address }
+      : { type: FULFILLMENT.DELIVERY, address, coords: addressCoords }
     const order = createOrder({
       items: snapshot,
       subtotal,
@@ -85,7 +86,7 @@ export default function Step4Confirm() {
               ? point
                 ? `${point.name} · ${t('checkout:timeReady', { time: timeSlot })}`
                 : t('checkout:validation.pickup')
-              : address}
+              : address + (addressCoords ? ` (${addressCoords.lat}, ${addressCoords.lng})` : '')}
           </span>
         </div>
         <div className="confirm-row">

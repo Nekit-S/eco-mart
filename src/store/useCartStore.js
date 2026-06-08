@@ -11,6 +11,7 @@ import { PROMO_TYPE, STORAGE_KEYS } from '../utils/constants.js'
 const emptyDraft = () => ({
   fulfillment: null, // 'delivery' | 'pickup'
   address: '',
+  addressCoords: null, // { lat, lng } when picked on the map
   pickupPointId: null,
   timeSlot: null,
   payment: null, // 'cash' | 'card_on_delivery'
@@ -62,6 +63,7 @@ export const useCartStore = create(
 
       setFulfillment: (type) => set({ fulfillment: type }),
       setAddress: (address) => set({ address }),
+      setAddressCoords: (addressCoords) => set({ addressCoords }),
       setPickupPoint: (pickupPointId) => set({ pickupPointId }),
       setTimeSlot: (timeSlot) => set({ timeSlot }),
       setPayment: (payment) => set({ payment }),

@@ -163,6 +163,28 @@
 .checkout { padding: 0 var(--sp-4) var(--sp-5); display: grid; gap: var(--sp-4); }
 .checkout-step { display: grid; gap: var(--sp-3); }
 .checkout-step__actions { margin-top: var(--sp-3); }
+
+/* ===== Map picker (Leaflet) ===== */
+.map-picker {
+  height: 240px;
+  width: 100%;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1px solid var(--c-border);
+  z-index: 0;
+}
+.map-picker--loading {
+  background: var(--c-surface-alt);
+}
+.map-pin__dot {
+  display: block;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: var(--c-brand);
+  border: 3px solid #fff;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.45);
+}
 .option-list { display: grid; gap: var(--sp-3); }
 .option {
   display: flex;

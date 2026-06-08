@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { lazy, Suspense, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import Button from '../../components/ui/Button.jsx'
@@ -7,6 +7,9 @@ import { useLang } from '../../hooks/useLang.js'
 import { useCartStore } from '../../store/useCartStore.js'
 import { getPickupPoints, localizeList } from '../../data/index.js'
 import { FULFILLMENT } from '../../utils/constants.js'
+
+// Leaflet ships only when the user opens the map mode.
+const MapPicker = lazy(() => import('../../components/checkout/MapPicker.jsx'))
 
 export default function Step2Where() {
   const { t } = useTranslation()
@@ -19,7 +22,10 @@ export default function Step2Where() {
   const setPickupPoint = useCartStore((s) => s.setPickupPoint)
   const timeSlot = useCartStore((s) => s.timeSlot)
   const setTimeSlot = useCartStore((s) => s.setTimeSlot)
+  const addressCoords = useCartStore((s) => s.addressCoords)
+  const setAddressCoords = useCartStore((s) => s.setAddressCoords)
   const [error, setError] = useState('')
+  const [mode, setMode] = useState(addressCoords ? 'map' : 'manual')
 
   const points = localizeList(getPickupPoints(), lng)
   const selectedPoint = points.find((p) => p.id === pickupPointId)
@@ -80,6 +86,37 @@ export default function Step2Where() {
       ) : (
         <>
           <h2 className="t-h3">{t('checkout:address.title')}</h2>
+
+          <div className="segmented">
+            <button
+              type="button"
+              className={'segmented__item' + (mode === 'manual' ? ' is-active' : '')}
+              onClick={() => setMode('manual')}
+            >
+              {t('checkout:address.modeManual')}
+            </button>
+            <button
+              type="button"
+              className={'segmented__item' + (mode === 'map' ? ' is-active' : '')}
+              onClick={() => setMode('map')}
+            >
+              {t('checkout:address.modeMap')}
+            </button>
+          </div>
+
+          {mode === 'map' && (
+            <>
+              <Suspense fallback={<div className="map-picker map-picker--loading" />}>
+                <MapPicker value={addressCoords} onPick={setAddressCoords} />
+              </Suspense>
+              <p className="t-caption">
+                {addressCoords
+                  ? t('checkout:map.picked', { lat: addressCoords.lat, lon: addressCoords.lng })
+                  : t('checkout:map.hint')}
+              </p>
+            </>
+          )}
+
           <input
             className="input"
             placeholder={t('checkout:address.placeholder')}
