@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import AppHeader from '../../components/layout/AppHeader.jsx'
@@ -8,15 +9,27 @@ import LanguageSwitcher from '../../components/ui/LanguageSwitcher.jsx'
 import Button from '../../components/ui/Button.jsx'
 import { useUiStore } from '../../store/useUiStore.js'
 import { useUserStore } from '../../store/useUserStore.js'
+import { useToast } from '../../hooks/useToast.js'
 
 export default function SettingsScreen() {
   const { t } = useTranslation()
   const navigate = useNavigate()
+  const toast = useToast()
   const theme = useUiStore((s) => s.theme)
   const setTheme = useUiStore((s) => s.setTheme)
   const notifications = useUiStore((s) => s.notifications)
   const setNotification = useUiStore((s) => s.setNotification)
+  const phone = useUserStore((s) => s.phone)
+  const setPhone = useUserStore((s) => s.setPhone)
   const logout = useUserStore((s) => s.logout)
+
+  const [phoneInput, setPhoneInput] = useState(phone || '')
+
+  const savePhone = (e) => {
+    e.preventDefault()
+    setPhone(phoneInput.trim())
+    toast(t('profile:phone.saved'), { tone: 'success' })
+  }
 
   const THEMES = [
     { key: 'light', label: t('profile:theme.light') },
@@ -44,6 +57,24 @@ export default function SettingsScreen() {
               </button>
             ))}
           </div>
+        </Section>
+
+        <Section title={t('profile:phone.title')}>
+          <form className="phone-form" onSubmit={savePhone}>
+            <input
+              className="input"
+              type="tel"
+              inputMode="tel"
+              placeholder={t('profile:phone.placeholder')}
+              value={phoneInput}
+              onChange={(e) => setPhoneInput(e.target.value)}
+              aria-label={t('profile:phone.title')}
+            />
+            <Button type="submit" variant="secondary">
+              {t('profile:phone.save')}
+            </Button>
+          </form>
+          <p className="t-caption">{t('profile:phone.hint')}</p>
         </Section>
 
         <Section title={t('profile:notifications')}>

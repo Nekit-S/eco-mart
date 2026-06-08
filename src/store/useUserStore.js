@@ -14,6 +14,7 @@ export const useUserStore = create(
       login: ({ name = '', phone = '' } = {}) =>
         set({ isAuthed: true, isGuest: false, name, phone }),
       continueAsGuest: () => set({ isAuthed: true, isGuest: true, name: '', phone: '' }),
+      setPhone: (phone) => set({ phone }),
       logout: () => set({ isAuthed: false, isGuest: false, name: '', phone: '' }),
     }),
     {

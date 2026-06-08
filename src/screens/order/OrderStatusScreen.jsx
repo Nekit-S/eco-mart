@@ -8,7 +8,10 @@ import StatusBadge from '../../components/ui/StatusBadge.jsx'
 import EmptyState from '../../components/feedback/EmptyState.jsx'
 import { useLang } from '../../hooks/useLang.js'
 import { useMoney } from '../../hooks/useMoney.js'
+import { useToast } from '../../hooks/useToast.js'
 import { useOrdersStore } from '../../store/useOrdersStore.js'
+import { useUserStore } from '../../store/useUserStore.js'
+import { useUiStore } from '../../store/useUiStore.js'
 import { localizeEntity } from '../../data/index.js'
 import {
   ORDER_STATUS,
@@ -25,6 +28,9 @@ export default function OrderStatusScreen() {
   const navigate = useNavigate()
   const order = useOrdersStore((s) => s.orders.find((o) => o.id === orderId) || null)
   const advanceStatus = useOrdersStore((s) => s.advanceStatus)
+  const toast = useToast()
+  const phone = useUserStore((s) => s.phone)
+  const notifyOrders = useUiStore((s) => s.notifications.orders)
 
   if (!order) {
     return (
@@ -42,6 +48,16 @@ export default function OrderStatusScreen() {
     order.fulfillment?.type === FULFILLMENT.PICKUP ? STATUS_FLOW_PICKUP : STATUS_FLOW_DELIVERY
   const currentIndex = flow.indexOf(order.status)
   const isFinal = order.status === ORDER_STATUS.COMPLETED || cancelled
+
+  // Advance the status, then simulate a WhatsApp status notification (front-end demo;
+  // a real send needs a backend + WhatsApp Business API).
+  const advance = () => {
+    const nextStatus = flow[currentIndex + 1]
+    advanceStatus(order.id)
+    if (!notifyOrders || !nextStatus) return
+    if (phone) toast(t('order:notifySent', { phone }), { tone: 'success' })
+    else toast(t('order:notifyNoPhone'), { tone: 'neutral' })
+  }
 
   return (
     <>
@@ -96,7 +112,7 @@ export default function OrderStatusScreen() {
         </div>
 
         {!isFinal && (
-          <Button variant="secondary" fullWidth onClick={() => advanceStatus(order.id)}>
+          <Button variant="secondary" fullWidth onClick={advance}>
             {t('order:advance')}
           </Button>
         )}
